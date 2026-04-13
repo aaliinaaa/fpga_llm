@@ -1,6 +1,10 @@
-# red_eyes_is_all_you_need
+# FPGA LLM
 
-A tiny transformer LLM running entirely on an Artix-7 FPGA (XC7A200T). Character-level text generation trained on Shakespeare, with the full inference pipeline implemented in synthesizable Verilog.
+In this project files from https://github.com/kulikov0/red_eyes_is_all_you_need/tree/main are used. 
+
+## Description
+
+A tiny transformer LLM running entirely on an Cyclone V (5CSXFC6D6F31C6N). Character-level text generation trained on Shakespeare, with the full inference pipeline implemented in synthesizable Verilog.
 
 ## Architecture
 
