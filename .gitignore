@@ -10,12 +10,6 @@ simulation/
 .quartus_sh_history
 quartus_sh_history
 
-# Quartus logs & reports (optional: удалите строки, если хотите хранить отчёты в Git)
-*.rpt
-*.csv
-*.log
-*.txt
-
 # Simulation outputs (ModelSim/Questa)
 *.vcd
 *.wlf
