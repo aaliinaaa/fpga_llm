@@ -128,7 +128,7 @@ module tb_kv_cache;
   endtask
 
   initial begin
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_kv_cache.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_kv_cache.log", "w");
 
     layer   = 2'd0;
     head    = 3'd0;

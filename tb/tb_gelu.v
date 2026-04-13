@@ -21,7 +21,7 @@ module tb_gelu;
   // Test inputs from hex file
   localparam N_TESTS = 556;
   reg [15:0] test_mem [0:N_TESTS-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/gelu_test_inputs.hex", test_mem);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/gelu_test_inputs.hex", test_mem);
 
   // Pipeline tracking: remember input that produced each output
   reg [15:0] pipe0, pipe1;
@@ -29,7 +29,7 @@ module tb_gelu;
   integer fd, i, out_count;
 
   initial begin
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_gelu.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_gelu.log", "w");
 
     valid_in = 1'b0;
     x_in = 16'h0000;

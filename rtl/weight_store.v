@@ -71,7 +71,7 @@ module weight_store (
   // Embedding
   weight_rom #(
     .DEPTH(32768),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/tok_emb_weight.hex")
+    .HEX_FILE("./mem/tok_emb_weight.hex")
   ) u_tok_emb (
     .clk_i (clk_i),
     .addr_i(addr_i[14:0]),
@@ -80,7 +80,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(32768),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/pos_emb_weight.hex")
+    .HEX_FILE("./mem/pos_emb_weight.hex")
   ) u_pos_emb (
     .clk_i (clk_i),
     .addr_i(addr_i[14:0]),
@@ -90,7 +90,7 @@ module weight_store (
   // Block 0
   weight_rom #(
     .DEPTH(49152),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block0_attn_qkv_weight.hex")
+    .HEX_FILE("./mem/block0_attn_qkv_weight.hex")
   ) u_b0_qkv (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -99,7 +99,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(16384),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block0_attn_proj_weight.hex")
+    .HEX_FILE("./mem/block0_attn_proj_weight.hex")
   ) u_b0_proj (
     .clk_i (clk_i),
     .addr_i(addr_i[13:0]),
@@ -108,7 +108,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block0_ff_up_weight.hex")
+    .HEX_FILE("./mem/block0_ff_up_weight.hex")
   ) u_b0_ff_up (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -117,7 +117,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block0_ff_down_weight.hex")
+    .HEX_FILE("./mem/block0_ff_down_weight.hex")
   ) u_b0_ff_down (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -127,7 +127,7 @@ module weight_store (
   // Block 1
   weight_rom #(
     .DEPTH(49152),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block1_attn_qkv_weight.hex")
+    .HEX_FILE("./mem/block1_attn_qkv_weight.hex")
   ) u_b1_qkv (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -136,7 +136,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(16384),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block1_attn_proj_weight.hex")
+    .HEX_FILE("./mem/block1_attn_proj_weight.hex")
   ) u_b1_proj (
     .clk_i (clk_i),
     .addr_i(addr_i[13:0]),
@@ -145,7 +145,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block1_ff_up_weight.hex")
+    .HEX_FILE("./mem/block1_ff_up_weight.hex")
   ) u_b1_ff_up (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -154,7 +154,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block1_ff_down_weight.hex")
+    .HEX_FILE("./mem/block1_ff_down_weight.hex")
   ) u_b1_ff_down (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -164,7 +164,7 @@ module weight_store (
   // Block 2
   weight_rom #(
     .DEPTH(49152),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block2_attn_qkv_weight.hex")
+    .HEX_FILE("./mem/block2_attn_qkv_weight.hex")
   ) u_b2_qkv (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -173,7 +173,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(16384),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block2_attn_proj_weight.hex")
+    .HEX_FILE("./mem/block2_attn_proj_weight.hex")
   ) u_b2_proj (
     .clk_i (clk_i),
     .addr_i(addr_i[13:0]),
@@ -182,7 +182,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block2_ff_up_weight.hex")
+    .HEX_FILE("./mem/block2_ff_up_weight.hex")
   ) u_b2_ff_up (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -191,7 +191,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block2_ff_down_weight.hex")
+    .HEX_FILE("./mem/block2_ff_down_weight.hex")
   ) u_b2_ff_down (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -201,7 +201,7 @@ module weight_store (
   // Block 3
   weight_rom #(
     .DEPTH(49152),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block3_attn_qkv_weight.hex")
+    .HEX_FILE("./mem/block3_attn_qkv_weight.hex")
   ) u_b3_qkv (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -210,7 +210,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(16384),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block3_attn_proj_weight.hex")
+    .HEX_FILE("./mem/block3_attn_proj_weight.hex")
   ) u_b3_proj (
     .clk_i (clk_i),
     .addr_i(addr_i[13:0]),
@@ -219,7 +219,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block3_ff_up_weight.hex")
+    .HEX_FILE("./mem/block3_ff_up_weight.hex")
   ) u_b3_ff_up (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -228,7 +228,7 @@ module weight_store (
 
   weight_rom #(
     .DEPTH(65536),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/block3_ff_down_weight.hex")
+    .HEX_FILE("./mem/block3_ff_down_weight.hex")
   ) u_b3_ff_down (
     .clk_i (clk_i),
     .addr_i(addr_i[15:0]),
@@ -238,7 +238,7 @@ module weight_store (
   //  Combined LayerNorm ROM
   weight_rom #(
     .DEPTH(2304),
-    .HEX_FILE("/home/user/red_eyes_is_all_you_need/mem/ln_params.hex")
+    .HEX_FILE("./mem/ln_params.hex")
   ) u_ln (
     .clk_i (clk_i),
     .addr_i(ln_addr),
@@ -274,8 +274,9 @@ module weight_store (
 
   // Output MUX: tensor_sel -> data
   // Registered to match BRAM 1-cycle latency
-  reg [5:0] sel_r;
-  always @(posedge clk_i) sel_r <= tensor_sel_i;
+//   reg [5:0] sel_r;
+//   always @(posedge clk_i) sel_r <= tensor_sel_i;
+  wire [5:0] sel_r = tensor_sel_i;
 
   always @(*) begin
     case (sel_r)

@@ -19,7 +19,7 @@ module tb_fp16;
 
   localparam N_ADD = 50;
   reg [47:0] tv_add [0:N_ADD-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_add_vectors.hex", tv_add);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_add_vectors.hex", tv_add);
 
   // fp16_mul
   reg  [15:0] mul_a, mul_b;
@@ -28,7 +28,7 @@ module tb_fp16;
 
   localparam N_MUL = 48;
   reg [47:0] tv_mul [0:N_MUL-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_mul_vectors.hex", tv_mul);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_mul_vectors.hex", tv_mul);
 
   // fp16_mac
   reg  [15:0] mac_a, mac_b, mac_acc_in;
@@ -40,8 +40,8 @@ module tb_fp16;
   reg [31:0] tv_mac_pairs [0:N_MAC*MAC_LEN-1];
   reg [15:0] tv_mac_exp [0:N_MAC-1];
   initial begin
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_mac_pairs.hex", tv_mac_pairs);
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_mac_expected.hex", tv_mac_exp);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_mac_pairs.hex", tv_mac_pairs);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_mac_expected.hex", tv_mac_exp);
   end
 
   // fp16_from_int8
@@ -51,7 +51,7 @@ module tb_fp16;
 
   localparam N_FROM = 256;
   reg [23:0] tv_from [0:N_FROM-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_from_int8_vectors.hex", tv_from);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_from_int8_vectors.hex", tv_from);
 
   // fp16_to_int8
   reg  [15:0] to_in;
@@ -60,7 +60,7 @@ module tb_fp16;
 
   localparam N_TO = 51;
   reg [23:0] tv_to [0:N_TO-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_to_int8_vectors.hex", tv_to);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_to_int8_vectors.hex", tv_to);
 
   // fp16_to_q167
   reg  [15:0] q167_in;
@@ -69,7 +69,7 @@ module tb_fp16;
 
   localparam N_Q167 = 57;
   reg [39:0] tv_q167 [0:N_Q167-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_to_q167_vectors.hex", tv_q167);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_to_q167_vectors.hex", tv_q167);
 
   // q115_to_fp16
   reg  [15:0] q115_in;
@@ -78,7 +78,7 @@ module tb_fp16;
 
   localparam N_Q115 = 66;
   reg [31:0] tv_q115 [0:N_Q115-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/q115_to_fp16_vectors.hex", tv_q115);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/q115_to_fp16_vectors.hex", tv_q115);
 
   // fp16_rsqrt (2-cycle registered, needs LUT BRAM)
   reg         rsqrt_valid_in;
@@ -91,7 +91,7 @@ module tb_fp16;
 
   localparam N_RSQRT = 62;
   reg [31:0] tv_rsqrt [0:N_RSQRT-1];
-  initial $readmemh("/home/user/red_eyes_is_all_you_need/mem/fp16_rsqrt_vectors.hex", tv_rsqrt);
+  initial $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/fp16_rsqrt_vectors.hex", tv_rsqrt);
 
   // matvec_fp16 test 1: 4x4
   localparam T1_IN = 4, T1_OUT = 4;
@@ -104,7 +104,7 @@ module tb_fp16;
   reg signed [7:0] mv1_wmem [0:T1_OUT*T1_IN-1];
   reg signed [7:0] mv1_wdata;
   initial begin
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_4x4_weights.hex",
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_4x4_weights.hex",
               mv1_wmem);
   end
   always @(posedge clk) mv1_wdata <= mv1_wmem[mv1_waddr];
@@ -119,8 +119,8 @@ module tb_fp16;
   reg [15:0] mv1_iv [0:T1_IN-1];
   reg [15:0] mv1_exp [0:T1_OUT-1];
   initial begin
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_4x4_input.hex", mv1_iv);
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_4x4_expected.hex", mv1_exp);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_4x4_input.hex", mv1_iv);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_4x4_expected.hex", mv1_exp);
   end
 
   // matvec_fp16 test 2: 8x4
@@ -134,7 +134,7 @@ module tb_fp16;
   reg signed [7:0] mv2_wmem [0:T2_OUT*T2_IN-1];
   reg signed [7:0] mv2_wdata;
   initial begin
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_8x4_weights.hex",
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_8x4_weights.hex",
               mv2_wmem);
   end
   always @(posedge clk) mv2_wdata <= mv2_wmem[mv2_waddr];
@@ -149,8 +149,8 @@ module tb_fp16;
   reg [15:0] mv2_iv [0:T2_IN-1];
   reg [15:0] mv2_exp [0:T2_OUT-1];
   initial begin
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_8x4_input.hex", mv2_iv);
-    $readmemh("/home/user/red_eyes_is_all_you_need/mem/matvec_fp16_8x4_expected.hex", mv2_exp);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_8x4_input.hex", mv2_iv);
+    $readmemh("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/matvec_fp16_8x4_expected.hex", mv2_exp);
   end
 
   initial begin
@@ -165,7 +165,7 @@ module tb_fp16;
     mv1_scale = 16'h2c00; mv2_scale = 16'h2c00;
     errors = 0;
 
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_fp16.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_fp16.log", "w");
 
     #30;
     @(posedge clk);

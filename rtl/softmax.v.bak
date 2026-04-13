@@ -31,8 +31,8 @@ module softmax #(
   parameter IN_W     = 16,
   parameter FRAC_W   = 7,
   parameter OUT_W    = 16,
-  parameter LUT0_HEX = "C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/exp_lut0.hex",
-  parameter LUT1_HEX = "C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/exp_lut1.hex"
+  parameter LUT0_HEX = "./mem/exp_lut0.hex",
+  parameter LUT1_HEX = "./mem/exp_lut1.hex"
 ) (
   input  wire              clk_i,
   input  wire              rst_i,

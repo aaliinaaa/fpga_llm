@@ -19,8 +19,8 @@ module tb_softmax;
     .IN_W(IN_W),
     .FRAC_W(FRAC_W),
     .OUT_W(OUT_W),
-    .LUT0_HEX("/home/user/red_eyes_is_all_you_need/mem/exp_lut0.hex"),
-    .LUT1_HEX("/home/user/red_eyes_is_all_you_need/mem/exp_lut1.hex")
+    .LUT0_HEX("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/exp_lut0.hex"),
+    .LUT1_HEX("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/exp_lut1.hex")
   ) uut (
     .clk_i      (clk),
     .rst_i      (rst),
@@ -108,7 +108,7 @@ module tb_softmax;
     in_data  = {IN_W{1'b0}};
     total_errors = 0;
 
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_softmax.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_softmax.log", "w");
     $fwrite(fd, "=== Softmax Testbench (IN_W=%0d) ===\n", IN_W);
     $display("=== Softmax Testbench (IN_W=%0d) ===", IN_W);
 

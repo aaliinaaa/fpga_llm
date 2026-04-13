@@ -15,7 +15,7 @@
 // Resources: 1 BRAM18 (shared LUT)
 
 module fp16_rsqrt #(
-  parameter HEX_FILE = "C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/mem/inv_sqrt_lut.hex"
+  parameter HEX_FILE = "./mem/inv_sqrt_lut.hex"
 ) (
   input  wire        clk_i,
   input  wire        valid_i,

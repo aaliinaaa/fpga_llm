@@ -93,7 +93,7 @@ module tb_transformer_top_stress;
   integer token_count;
 
   initial begin
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_transformer_top_stress.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_transformer_top_stress.log", "w");
 
     token    = 8'd0;
     start    = 1'b0;

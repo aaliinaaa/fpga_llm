@@ -12,7 +12,7 @@ module weight_rom #(
   output reg  [7:0]               data_o
 );
 
-  (* ram_style = "block" *) reg [7:0] mem [0:DEPTH-1];
+  (* ramstyle = "M9K" *) reg [7:0] mem [0:DEPTH-1];
 
   initial begin
     $readmemh(HEX_FILE, mem);

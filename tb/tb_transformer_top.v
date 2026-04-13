@@ -97,7 +97,7 @@ module tb_transformer_top;
   wire [256*16-1:0] logits = dut.head_out;
 
   initial begin
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_transformer_top.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_transformer_top.log", "w");
 
     token    = 8'd0;
     start    = 1'b0;

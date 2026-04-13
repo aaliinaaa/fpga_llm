@@ -94,7 +94,7 @@ module tb_weight_store;
     errors = 0;
 
     // Open log file
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_weight_store.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_weight_store.log", "w");
 
     // Wait for ROMs to initialize
     #20;

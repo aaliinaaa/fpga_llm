@@ -15,7 +15,7 @@ module kv_ram #(
   output reg  [DATA_W-1:0]         rdata_o
 );
 
-  (* ram_style = "block" *) reg [DATA_W-1:0] mem [0:DEPTH-1];
+  (* ramstyle = "M9K" *) reg [DATA_W-1:0] mem [0:DEPTH-1];
 
   always @(posedge clk_i) begin
     if (we_i) begin

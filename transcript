@@ -1,0 +1,28 @@
+# vsim -c work.tb_transformer_top -do "run -all; quit" 
+# Start time: 20:44:45 on Apr 13,2026
+# Loading work.tb_transformer_top
+# Loading work.weight_store
+# Loading work.weight_rom
+# Loading work.kv_cache
+# Loading work.transformer_top
+# Loading work.embedding
+# Loading work.fp16_from_int8
+# Loading work.fp16_mul_comb
+# Loading work.fp16_add_comb
+# Loading work.transformer_layer
+# Loading work.layernorm
+# Loading work.fp16_rsqrt
+# Loading work.attention
+# Loading work.matvec_fp16
+# Loading work.softmax
+# Loading work.fp16_to_q167
+# Loading work.q115_to_fp16
+# Loading work.gelu
+# Loading work.sampler
+# Loading work.kv_ram
+# run -all
+# === Transformer Top Testbench ===
+# Test 0: single token generate, token=42
+#   Test 0: output token=85 (0x55)
+# Test 1: prompt token=10, then token=20+generate
+#   Prompt token=10 done

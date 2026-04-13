@@ -160,7 +160,7 @@ module tb_transformer_layer;
   endtask
 
   initial begin
-    fd = $fopen("/home/user/red_eyes_is_all_you_need/logs/tb_transformer_layer.log", "w");
+    fd = $fopen("C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/logs/tb_transformer_layer.log", "w");
 
     layer = 2'd0;
     pos   = 8'd0;
