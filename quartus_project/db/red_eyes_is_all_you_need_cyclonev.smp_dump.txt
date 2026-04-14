@@ -1,0 +1,81 @@
+
+State Machine - |transformer_top|layernorm:u_ln_f|state
+Name state.S_NORM_B state.S_NORM_G state.S_INV_SQRT state.S_VAR_DIV state.S_VAR_ACC state.S_MEAN_DIV state.S_MEAN_ACC state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 
+state.S_MEAN_ACC 0 0 0 0 0 0 1 1 
+state.S_MEAN_DIV 0 0 0 0 0 1 0 1 
+state.S_VAR_ACC 0 0 0 0 1 0 0 1 
+state.S_VAR_DIV 0 0 0 1 0 0 0 1 
+state.S_INV_SQRT 0 0 1 0 0 0 0 1 
+state.S_NORM_G 0 1 0 0 0 0 0 1 
+state.S_NORM_B 1 0 0 0 0 0 0 1 
+
+State Machine - |transformer_top|state
+Name state.S_SAMPLE state.S_HEAD_PROJ state.S_LN_F_WAIT state.S_LN_F_START state.S_LAYER_WAIT state.S_LAYER_START state.S_EMBED state.S_IDLE state.S_TOKEN_OUT 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 
+state.S_EMBED 0 0 0 0 0 0 1 1 0 
+state.S_LAYER_START 0 0 0 0 0 1 0 1 0 
+state.S_LAYER_WAIT 0 0 0 0 1 0 0 1 0 
+state.S_LN_F_START 0 0 0 1 0 0 0 1 0 
+state.S_LN_F_WAIT 0 0 1 0 0 0 0 1 0 
+state.S_HEAD_PROJ 0 1 0 0 0 0 0 1 0 
+state.S_SAMPLE 1 0 0 0 0 0 0 1 0 
+state.S_TOKEN_OUT 0 0 0 0 0 0 0 1 1 
+
+State Machine - |transformer_top|samp_state
+Name samp_state.SAMP_DONE samp_state.SAMP_SCAN samp_state.SAMP_PREFETCH samp_state.SAMP_IDLE 
+samp_state.SAMP_IDLE 0 0 0 0 
+samp_state.SAMP_PREFETCH 0 0 1 1 
+samp_state.SAMP_SCAN 0 1 0 1 
+samp_state.SAMP_DONE 1 0 0 1 
+
+State Machine - |transformer_top|transformer_layer:u_tl|state
+Name state.S_FF_DOWN state.S_GELU state.S_FF_UP state.S_RES1_ACC state.S_ATTN state.S_LN_WAIT state.S_LN_START state.S_IDLE state.S_FF_DRAIN 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 
+state.S_LN_START 0 0 0 0 0 0 1 1 0 
+state.S_LN_WAIT 0 0 0 0 0 1 0 1 0 
+state.S_ATTN 0 0 0 0 1 0 0 1 0 
+state.S_RES1_ACC 0 0 0 1 0 0 0 1 0 
+state.S_FF_UP 0 0 1 0 0 0 0 1 0 
+state.S_GELU 0 1 0 0 0 0 0 1 0 
+state.S_FF_DOWN 1 0 0 0 0 0 0 1 0 
+state.S_FF_DRAIN 0 0 0 0 0 0 0 1 1 
+
+State Machine - |transformer_top|transformer_layer:u_tl|attention:u_attn|state
+Name state.S_DONE state.S_PROJ state.S_NEXT_HEAD state.S_AV_STORE state.S_AV state.S_SM_WAIT state.S_SCORE_PAD state.S_SCORE state.S_KV_STORE state.S_QKV state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.S_QKV 0 0 0 0 0 0 0 0 0 1 1 
+state.S_KV_STORE 0 0 0 0 0 0 0 0 1 0 1 
+state.S_SCORE 0 0 0 0 0 0 0 1 0 0 1 
+state.S_SCORE_PAD 0 0 0 0 0 0 1 0 0 0 1 
+state.S_SM_WAIT 0 0 0 0 0 1 0 0 0 0 1 
+state.S_AV 0 0 0 0 1 0 0 0 0 0 1 
+state.S_AV_STORE 0 0 0 1 0 0 0 0 0 0 1 
+state.S_NEXT_HEAD 0 0 1 0 0 0 0 0 0 0 1 
+state.S_PROJ 0 1 0 0 0 0 0 0 0 0 1 
+state.S_DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |transformer_top|transformer_layer:u_tl|attention:u_attn|softmax:u_sm|state
+Name state.S_LN_SUM state.S_EXP_ACC state.S_LOAD state.S_IDLE state.S_NORM 
+state.S_IDLE 0 0 0 0 0 
+state.S_LOAD 0 0 1 1 0 
+state.S_EXP_ACC 0 1 0 1 0 
+state.S_LN_SUM 1 0 0 1 0 
+state.S_NORM 0 0 0 1 1 
+
+State Machine - |transformer_top|transformer_layer:u_tl|layernorm:u_ln|state
+Name state.S_NORM_B state.S_NORM_G state.S_INV_SQRT state.S_VAR_DIV state.S_VAR_ACC state.S_MEAN_DIV state.S_MEAN_ACC state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 0 
+state.S_MEAN_ACC 0 0 0 0 0 0 1 1 
+state.S_MEAN_DIV 0 0 0 0 0 1 0 1 
+state.S_VAR_ACC 0 0 0 0 1 0 0 1 
+state.S_VAR_DIV 0 0 0 1 0 0 0 1 
+state.S_INV_SQRT 0 0 1 0 0 0 0 1 
+state.S_NORM_G 0 1 0 0 0 0 0 1 
+state.S_NORM_B 1 0 0 0 0 0 0 1 
+
+State Machine - |transformer_top|embedding:u_emb|state
+Name state.S_IDLE state.S_READ_POS state.S_READ_TOK 
+state.S_IDLE 0 0 0 
+state.S_READ_TOK 1 0 1 
+state.S_READ_POS 1 1 0 

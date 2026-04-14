@@ -1,0 +1,74 @@
+=== Weight Store Testbench ===
+OK   tensor 0  addr=0  data=0x67  scale=0x00001e50
+OK   tensor 0  addr=32767  data=0x09
+OK   tensor 1  addr=0  data=0xfa  scale=0x00001ed6
+OK   tensor 1  addr=32767  data=0x11
+OK   tensor 2  addr=0  data=0x5c  scale=0x00002124
+OK   tensor 2  addr=127  data=0x5c
+OK   tensor 3  addr=0  data=0xcb  scale=0x00001c90
+OK   tensor 3  addr=127  data=0xe3
+OK   tensor 4  addr=0  data=0xfb  scale=0x00001913
+OK   tensor 4  addr=49151  data=0x0c
+OK   tensor 5  addr=0  data=0xe8  scale=0x00001524
+OK   tensor 5  addr=16383  data=0x2a
+OK   tensor 6  addr=0  data=0x69  scale=0x0000209c
+OK   tensor 6  addr=127  data=0x71
+OK   tensor 7  addr=0  data=0x07  scale=0x00001124
+OK   tensor 7  addr=127  data=0xca
+OK   tensor 8  addr=0  data=0xf7  scale=0x000017c4
+OK   tensor 8  addr=65535  data=0xee
+OK   tensor 9  addr=0  data=0x12  scale=0x00001614
+OK   tensor 9  addr=65535  data=0x10
+OK   tensor 10  addr=0  data=0x62  scale=0x00002144
+OK   tensor 10  addr=127  data=0x66
+OK   tensor 11  addr=0  data=0xc5  scale=0x00001536
+OK   tensor 11  addr=127  data=0x01
+OK   tensor 12  addr=0  data=0x00  scale=0x00001cb2
+OK   tensor 12  addr=49151  data=0xf8
+OK   tensor 13  addr=0  data=0xf1  scale=0x00001599
+OK   tensor 13  addr=16383  data=0x05
+OK   tensor 14  addr=0  data=0x72  scale=0x000020ff
+OK   tensor 14  addr=127  data=0x73
+OK   tensor 15  addr=0  data=0xeb  scale=0x00001480
+OK   tensor 15  addr=127  data=0x06
+OK   tensor 16  addr=0  data=0xec  scale=0x0000177d
+OK   tensor 16  addr=65535  data=0xf5
+OK   tensor 17  addr=0  data=0x07  scale=0x00001786
+OK   tensor 17  addr=65535  data=0xfb
+OK   tensor 18  addr=0  data=0x5d  scale=0x0000222c
+OK   tensor 18  addr=127  data=0x62
+OK   tensor 19  addr=0  data=0xee  scale=0x000012e2
+OK   tensor 19  addr=127  data=0xf9
+OK   tensor 20  addr=0  data=0xf9  scale=0x00001ddb
+OK   tensor 20  addr=49151  data=0xff
+OK   tensor 21  addr=0  data=0x00  scale=0x0000159f
+OK   tensor 21  addr=16383  data=0x01
+OK   tensor 22  addr=0  data=0x74  scale=0x0000221d
+OK   tensor 22  addr=127  data=0x72
+OK   tensor 23  addr=0  data=0xb5  scale=0x00001668
+OK   tensor 23  addr=127  data=0xf7
+OK   tensor 24  addr=0  data=0xfc  scale=0x0000178d
+OK   tensor 24  addr=65535  data=0xef
+OK   tensor 25  addr=0  data=0xf9  scale=0x00001658
+OK   tensor 25  addr=65535  data=0xf7
+OK   tensor 26  addr=0  data=0x74  scale=0x000021ca
+OK   tensor 26  addr=127  data=0x78
+OK   tensor 27  addr=0  data=0xae  scale=0x000010da
+OK   tensor 27  addr=127  data=0x27
+OK   tensor 28  addr=0  data=0xfd  scale=0x00001d03
+OK   tensor 28  addr=49151  data=0x0b
+OK   tensor 29  addr=0  data=0x0f  scale=0x00001809
+OK   tensor 29  addr=16383  data=0x25
+OK   tensor 30  addr=0  data=0x77  scale=0x00002292
+OK   tensor 30  addr=127  data=0x78
+OK   tensor 31  addr=0  data=0xac  scale=0x000015b5
+OK   tensor 31  addr=127  data=0x9b
+OK   tensor 32  addr=0  data=0x26  scale=0x00001795
+OK   tensor 32  addr=65535  data=0xf8
+OK   tensor 33  addr=0  data=0x19  scale=0x000019e9
+OK   tensor 33  addr=65535  data=0x03
+OK   tensor 34  addr=0  data=0x64  scale=0x000024ee
+OK   tensor 34  addr=127  data=0x5c
+OK   tensor 35  addr=0  data=0xcf  scale=0x000019fd
+OK   tensor 35  addr=127  data=0xaa
+=== All 72 tests passed ===

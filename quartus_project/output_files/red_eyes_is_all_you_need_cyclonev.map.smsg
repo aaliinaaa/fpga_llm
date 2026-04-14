@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at transformer_top.v(163): object "samp_done" differs only in case from object "SAMP_DONE" in the same scope File: C:/Users/User/OneDrive/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v Line: 163
