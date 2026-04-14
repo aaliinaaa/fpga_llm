@@ -63,7 +63,7 @@ module softmax #(
 
 
   // Input buffer BRAM (N x IN_W)
-  (* ramstyle = "M9K" *) reg [IN_W-1:0] input_buf [0:N-1];
+  (* ramstyle = "M10K" *) reg [IN_W-1:0] input_buf [0:N-1];
   reg  [ADDR_W-1:0] buf_waddr;
   reg  [ADDR_W-1:0] buf_raddr;
   reg  [IN_W-1:0]   buf_rdata;
@@ -77,32 +77,34 @@ module softmax #(
 
   // Bipartite exp LUTs (256 x 16-bit each)
   // Addresses driven combinationally from buf_rdata -> d -> bipartite split
-  (* ramstyle = "M9K" *) reg [15:0] exp_lut0 [0:255];
-  (* ramstyle = "M9K" *) reg signed [15:0] exp_lut1 [0:255];
+  (* ramstyle = "M10K" *) reg [15:0] exp_lut0 [0:255];
+  (* ramstyle = "M10K" *) reg signed [15:0] exp_lut1 [0:255];
   initial begin
     $readmemh(LUT0_HEX, exp_lut0);
     $readmemh(LUT1_HEX, exp_lut1);
   end
 
-  // ln(1 + s/16) * 128 lookup (distributed RAM)
-  reg [7:0] ln1ps_lut [0:15];
-  initial begin
-    ln1ps_lut[ 0] = 8'd0;
-    ln1ps_lut[ 1] = 8'd8;
-    ln1ps_lut[ 2] = 8'd15;
-    ln1ps_lut[ 3] = 8'd22;
-    ln1ps_lut[ 4] = 8'd29;
-    ln1ps_lut[ 5] = 8'd35;
-    ln1ps_lut[ 6] = 8'd41;
-    ln1ps_lut[ 7] = 8'd47;
-    ln1ps_lut[ 8] = 8'd53;
-    ln1ps_lut[ 9] = 8'd58;
-    ln1ps_lut[10] = 8'd63;
-    ln1ps_lut[11] = 8'd68;
-    ln1ps_lut[12] = 8'd73;
-    ln1ps_lut[13] = 8'd78;
-    ln1ps_lut[14] = 8'd82;
-    ln1ps_lut[15] = 8'd87;
+  // ln(1 + s/16) * 128 lookup - pure combinational (16 entries, too small for M10K)
+  reg [7:0] ln1ps_val_r;
+  always @(*) begin
+    case (sum_mantissa)
+      4'd0:  ln1ps_val_r = 8'd0;
+      4'd1:  ln1ps_val_r = 8'd8;
+      4'd2:  ln1ps_val_r = 8'd15;
+      4'd3:  ln1ps_val_r = 8'd22;
+      4'd4:  ln1ps_val_r = 8'd29;
+      4'd5:  ln1ps_val_r = 8'd35;
+      4'd6:  ln1ps_val_r = 8'd41;
+      4'd7:  ln1ps_val_r = 8'd47;
+      4'd8:  ln1ps_val_r = 8'd53;
+      4'd9:  ln1ps_val_r = 8'd58;
+      4'd10: ln1ps_val_r = 8'd63;
+      4'd11: ln1ps_val_r = 8'd68;
+      4'd12: ln1ps_val_r = 8'd73;
+      4'd13: ln1ps_val_r = 8'd78;
+      4'd14: ln1ps_val_r = 8'd82;
+      default: ln1ps_val_r = 8'd87;
+    endcase
   end
 
 
@@ -181,7 +183,7 @@ module softmax #(
   // LN_SUM (combinational from sum_acc)
   wire signed [5:0]  k_minus_15 = {1'b0, sum_lod} - 6'sd15;
   wire signed [12:0] kln2_term  = k_minus_15 * $signed({1'b0, LN2_Q7});
-  wire [7:0]         ln1ps_val  = ln1ps_lut[sum_mantissa];
+  wire [7:0]         ln1ps_val  = ln1ps_val_r;
   wire signed [12:0] ln_raw     = kln2_term + $signed({1'b0, ln1ps_val});
 
 

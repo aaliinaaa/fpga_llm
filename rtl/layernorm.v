@@ -1,19 +1,33 @@
 // LayerNorm: y_i = (x_i - mean) / sqrt(var) * gamma + beta
-// Ref: https://www.mdpi.com/2072-666X/17/1/84 (LOD-LUT rsqrt)
 //
-// Input: 128 fp16 values as flat bus (DIM*16 bits)
-// Output: 128 fp16 values as flat bus (DIM*16 bits)
+// Optimisation vs original:
+//   - gamma_buf[128] and beta_buf[128] (2 x 128 x fp16 = 4096 flip-flops) REMOVED.
+//   - gamma and beta are now read from weight_store during the NORM pass itself,
+//     one element per cycle, interleaved with the normalisation arithmetic.
+//     This requires the weight_store to be accessible during NORM (it is, because
+//     the weight-store mux in the parent gives us the port whenever we assert
+//     w_sel_o / w_addr_o).
+//   - FSM collapses S_LOAD_GAMMA + S_LOAD_BETA + S_NORM  →  S_NORM_GAMMA + S_NORM_BETA
+//     Two-pass norm: first pass reads gamma and computes (x-mean)*inv_std*gamma,
+//     second pass reads beta and adds beta. Alternatively, we do a single pass
+//     but gamma must be available 2 cycles early (BRAM pipeline) while beta is
+//     available 2 cycles early from the beta base address.
 //
-// Reads gamma and beta int8 from weight_store, dequants to fp16 via
-// fp16_from_int8(byte) * scale
+//   SINGLE-PASS APPROACH (chosen):
+//     We issue gamma addr and beta addr simultaneously by using w_sel_o for gamma
+//     (gamma_sel_i) and a local register for beta. But the weight_store has only
+//     one data port (w_data_i), so we CANNOT read gamma and beta simultaneously.
+//
+//   TWO-PASS APPROACH (chosen for correctness):
+//     Pass A (S_NORM_G, 130 cycles): read gamma from weight_store, compute
+//       partial = (x[i] - mean) * inv_std * gamma[i], store in y_o[i].
+//     Pass B (S_NORM_B, 130 cycles): read beta, add beta[i] to y_o[i].
+//     Total norm latency: 260 cycles vs original 128+130+130 = 388 cycles — FASTER.
+//     gamma_buf and beta_buf eliminated: saves 4096 FF.
 //
 // FSM: IDLE -> MEAN_ACC(128) -> MEAN_DIV(1) -> VAR_ACC(128) ->
-//      VAR_DIV(1) -> INV_SQRT(2) -> LOAD_GAMMA(129) -> LOAD_BETA(129) ->
-//      NORM(128)
-// Latency: ~646 cycles
-//
-// TODO: optimize - LOAD_GAMMA can overlap with MEAN_ACC, LOAD_BETA with
-// VAR_ACC when weight_store port is free during input loading, saving ~258 cycles
+//      VAR_DIV(1) -> INV_SQRT(2) -> NORM_G(130) -> NORM_B(130) -> DONE
+// Latency: ~522 cycles (was ~646)
 
 module layernorm #(
   parameter DIM = 128
@@ -43,15 +57,14 @@ module layernorm #(
   output reg               busy_o
 );
 
-  localparam S_IDLE       = 4'd0;
-  localparam S_MEAN_ACC   = 4'd1;
-  localparam S_MEAN_DIV   = 4'd2;
-  localparam S_VAR_ACC    = 4'd3;
-  localparam S_VAR_DIV    = 4'd4;
-  localparam S_INV_SQRT   = 4'd5;
-  localparam S_LOAD_GAMMA = 4'd6;
-  localparam S_LOAD_BETA  = 4'd7;
-  localparam S_NORM       = 4'd8;
+  localparam S_IDLE    = 4'd0;
+  localparam S_MEAN_ACC = 4'd1;
+  localparam S_MEAN_DIV = 4'd2;
+  localparam S_VAR_ACC  = 4'd3;
+  localparam S_VAR_DIV  = 4'd4;
+  localparam S_INV_SQRT = 4'd5;
+  localparam S_NORM_G   = 4'd6;   // read gamma + compute partial y
+  localparam S_NORM_B   = 4'd7;   // read beta  + add beta to y
 
   reg [3:0] state;
   reg [7:0] idx;
@@ -62,19 +75,21 @@ module layernorm #(
   reg [15:0] var_acc;
   reg [15:0] inv_std;
 
-  // Gamma/beta buffers (fp16, dequanted)
-  reg [15:0] gamma_buf [0:DIM-1];
-  reg [15:0] beta_buf  [0:DIM-1];
+  // fp16(1/128)
+  localparam [15:0] INV_N = 16'h2000;
 
   // Current input element
   wire [15:0] x_elem = x_i[idx[6:0]*16 +: 16];
 
-  // fp16(1/128) = 0x2000: sign=0, exp=8, frac=0 -> 2^(8-15) = 2^-7 = 1/128
-  localparam [15:0] INV_N = 16'h2000;
+  // BRAM pipeline offset: addr registered T, data valid T+2
+  wire [7:0] prev = idx - 8'd1;   // element whose data just arrived
+  wire [7:0] prev2 = idx - 8'd2;  // element written to y_o this cycle
 
-  // Combinational fp16 arithmetic
+  // -----------------------------------------------------------------------
+  // Combinational fp16 arithmetic — shared across states
+  // -----------------------------------------------------------------------
 
-  // MEAN_ACC: sum_acc + x[idx]
+  // MEAN_ACC
   wire [15:0] mean_add_out;
   fp16_add_comb u_mean_add (.a_i(sum_acc), .b_i(x_elem), .sum_o(mean_add_out));
 
@@ -82,7 +97,7 @@ module layernorm #(
   wire [15:0] mean_div_out;
   fp16_mul_comb u_mean_div (.a_i(sum_acc), .b_i(INV_N), .prod_o(mean_div_out));
 
-  // VAR_ACC: diff = x - mean, sq = diff * diff, var_acc + sq
+  // VAR_ACC: diff = x - mean, sq = diff^2
   wire [15:0] var_diff;
   fp16_add_comb u_var_sub (.a_i(x_elem), .b_i(neg_mean), .sum_o(var_diff));
 
@@ -92,11 +107,11 @@ module layernorm #(
   wire [15:0] var_add_out;
   fp16_add_comb u_var_add (.a_i(var_acc), .b_i(var_sq), .sum_o(var_add_out));
 
-  // VAR_DIV: var_acc * (1/128)
+  // VAR_DIV
   wire [15:0] var_div_out;
   fp16_mul_comb u_var_div (.a_i(var_acc), .b_i(INV_N), .prod_o(var_div_out));
 
-  // fp16_rsqrt interface
+  // fp16_rsqrt
   reg         rsqrt_valid;
   wire        rsqrt_done;
   wire [15:0] rsqrt_result;
@@ -109,31 +124,35 @@ module layernorm #(
     .result_o(rsqrt_result)
   );
 
-  // LOAD_GAMMA/BETA: dequant int8 -> fp16
+  // Dequant: int8 from weight_store -> fp16
   wire [15:0] dequant_fp16;
   fp16_from_int8 u_dequant (.val_i(w_data_i), .fp16_o(dequant_fp16));
 
+  // Dequant * gamma_scale  (used in S_NORM_G)
   wire [15:0] dequant_gamma;
   fp16_mul_comb u_deq_gamma (.a_i(dequant_fp16), .b_i(gamma_scale_i), .prod_o(dequant_gamma));
 
+  // Dequant * beta_scale   (used in S_NORM_B)
   wire [15:0] dequant_beta;
   fp16_mul_comb u_deq_beta (.a_i(dequant_fp16), .b_i(beta_scale_i), .prod_o(dequant_beta));
 
-  // NORM: y = (x - mean) * inv_std * gamma + beta
+  // NORM_G: partial = (x[i] - mean) * inv_std * gamma[i]
+  // We need x_elem for the element whose gamma just arrived (prev2).
+  wire [15:0] norm_x_elem = x_i[prev2[6:0]*16 +: 16];
+
   wire [15:0] norm_diff;
-  fp16_add_comb u_norm_sub (.a_i(x_elem), .b_i(neg_mean), .sum_o(norm_diff));
+  fp16_add_comb u_norm_sub (.a_i(norm_x_elem), .b_i(neg_mean), .sum_o(norm_diff));
 
   wire [15:0] norm_scaled;
   fp16_mul_comb u_norm_mul1 (.a_i(norm_diff), .b_i(inv_std), .prod_o(norm_scaled));
 
-  wire [15:0] norm_gamma;
-  fp16_mul_comb u_norm_mul2 (.a_i(norm_scaled), .b_i(gamma_buf[idx[6:0]]), .prod_o(norm_gamma));
+  wire [15:0] norm_gamma_val;
+  fp16_mul_comb u_norm_mul2 (.a_i(norm_scaled), .b_i(dequant_gamma), .prod_o(norm_gamma_val));
 
+  // NORM_B: y[i] += beta[i]
+  wire [15:0] norm_y_elem = y_o[prev2[6:0]*16 +: 16];
   wire [15:0] norm_out;
-  fp16_add_comb u_norm_add (.a_i(norm_gamma), .b_i(beta_buf[idx[6:0]]), .sum_o(norm_out));
-
-  // BRAM pipeline index for gamma/beta capture
-  wire [7:0] prev = idx - 8'd1;
+  fp16_add_comb u_norm_add (.a_i(norm_y_elem), .b_i(dequant_beta), .sum_o(norm_out));
 
   always @(posedge clk_i) begin
     if (rst_i) begin
@@ -164,16 +183,15 @@ module layernorm #(
           end
         end
 
-        // Pass 1: accumulate fp16 sum of all inputs
+        // Pass 1: accumulate sum
         S_MEAN_ACC: begin
           sum_acc <= mean_add_out;
           idx     <= idx + 8'd1;
-          if (idx == DIM[7:0] - 8'd1) begin
+          if (idx == DIM[7:0] - 8'd1)
             state <= S_MEAN_DIV;
-          end
         end
 
-        // Compute mean = sum * (1/128), neg_mean = -mean
+        // Compute mean, negate
         S_MEAN_DIV: begin
           neg_mean <= {~mean_div_out[15], mean_div_out[14:0]};
           var_acc  <= 16'd0;
@@ -181,71 +199,73 @@ module layernorm #(
           state    <= S_VAR_ACC;
         end
 
-        // Pass 2: accumulate variance = sum((x - mean)^2)
+        // Pass 2: accumulate variance
         S_VAR_ACC: begin
           var_acc <= var_add_out;
           idx     <= idx + 8'd1;
-          if (idx == DIM[7:0] - 8'd1) begin
+          if (idx == DIM[7:0] - 8'd1)
             state <= S_VAR_DIV;
-          end
         end
 
-        // Compute var = var_acc * (1/128), launch rsqrt
+        // Compute var, launch rsqrt
         S_VAR_DIV: begin
           rsqrt_valid <= 1'b1;
           idx         <= 8'd0;
           state       <= S_INV_SQRT;
         end
 
-        // Wait for fp16_rsqrt result (2 cycles)
+        // Wait for rsqrt (2 cycles)
         S_INV_SQRT: begin
           if (rsqrt_done) begin
             inv_std  <= rsqrt_result;
-            state    <= S_LOAD_GAMMA;
+            state    <= S_NORM_G;
             idx      <= 8'd0;
             w_sel_o  <= gamma_sel_i;
             w_addr_o <= 7'd0;
           end
         end
 
-        // Load gamma from weight_store, dequant to fp16
-        // 2-cycle BRAM pipeline: addr registered + data registered
-        S_LOAD_GAMMA: begin
-          if (idx < DIM[7:0] - 8'd1) begin
+        // Pass 3a: read gamma from weight_store (2-cycle BRAM latency),
+        // compute partial y[i] = (x[i]-mean)*inv_std*gamma[i]
+        //
+        // idx=0 : issue addr 0
+        // idx=1 : issue addr 1, addr 0 latched in BRAM
+        // idx=2 : issue addr 2, data[0] valid -> compute partial[0] -> write y_o[0]
+        // ...
+        // idx=DIM+1: last write y_o[DIM-1]
+        S_NORM_G: begin
+          // Advance address: issue addr idx+1 so data arrives at idx+2
+          if (idx < DIM[7:0] - 8'd1)
             w_addr_o <= idx[6:0] + 7'd1;
+
+          // Write partial result when data is valid (2 cycles after addr)
+          if (idx >= 8'd2) begin
+            y_o[prev2[6:0]*16 +: 16] <= norm_gamma_val;
           end
-          if (idx > 0) begin
-            gamma_buf[prev[6:0]] <= dequant_gamma;
-          end
+
           idx <= idx + 8'd1;
-          if (idx == DIM[7:0]) begin
-            state    <= S_LOAD_BETA;
+
+          if (idx == DIM[7:0] + 8'd1) begin
+            // All partials written; now add beta
+            state    <= S_NORM_B;
             idx      <= 8'd0;
-            w_sel_o  <= gamma_sel_i + 6'd1;
+            w_sel_o  <= gamma_sel_i + 6'd1;  // beta tensor
             w_addr_o <= 7'd0;
           end
         end
 
-        // Load beta from weight_store, dequant to fp16
-        S_LOAD_BETA: begin
-          if (idx < DIM[7:0] - 8'd1) begin
+        // Pass 3b: read beta, add to y_o[i]
+        S_NORM_B: begin
+          if (idx < DIM[7:0] - 8'd1)
             w_addr_o <= idx[6:0] + 7'd1;
-          end
-          if (idx > 0) begin
-            beta_buf[prev[6:0]] <= dequant_beta;
-          end
-          idx <= idx + 8'd1;
-          if (idx == DIM[7:0]) begin
-            state <= S_NORM;
-            idx   <= 8'd0;
-          end
-        end
 
-        // Pass 3: normalize and output
-        S_NORM: begin
-          y_o[idx[6:0]*16 +: 16] <= norm_out;
+          if (idx >= 8'd2) begin
+            y_o[prev2[6:0]*16 +: 16] <= norm_out;
+          end
+
           idx <= idx + 8'd1;
-          if (idx == DIM[7:0] - 8'd1) begin
+
+          if (idx == DIM[7:0] + 8'd1) begin
             state  <= S_IDLE;
             done_o <= 1'b1;
             busy_o <= 1'b0;
