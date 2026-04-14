@@ -1,32 +1,45 @@
-// Matrix-vector multiply: int8 weights x fp16 input -> fp16 output
+// Matrix-vector multiply: int8 weights x fp16 input -> fp16 output (streaming)
 //
-// Weights read from BRAM as int8, dequantized to fp16 at runtime:
-//   dequant_w = fp16_from_int8(w) * scale_i (combinational)
-//   acc += dequant_w * in_vec[col] (combinational mul + add, registered acc)
+// Optimisation vs original:
+//   out_vec_o [OUT_DIM*16-1:0] REMOVED — was the dominant FF cost
+//   (512x16=8192 FF for ff_up, 384x16=6144 FF for qkv, etc.)
 //
+// New streaming output interface:
+//   out_valid_o  — pulses 1 cycle when a row is complete
+//   out_data_o   — fp16 result for that row
+//   out_addr_o   — row index (0..OUT_DIM-1)
+//
+// The caller must capture each element into M10K or a register as it arrives.
+// done_o still pulses 1 cycle after the last out_valid_o.
+//
+// Latency unchanged: OUT_DIM * IN_DIM + 2 cycles
 // 1 cycle per element after initial BRAM prefetch
-// Latency: OUT_DIM * IN_DIM + 2 cycles
 
 module matvec_fp16 #(
   parameter IN_DIM  = 128,
   parameter OUT_DIM = 128
 ) (
-  input  wire                             clk_i,
-  input  wire                             rst_i,
-  input  wire                             start_i,
+  input  wire                              clk_i,
+  input  wire                              rst_i,
+  input  wire                              start_i,
   input  wire [IN_DIM*16-1:0]             in_vec_i,
-  input  wire [15:0]                      scale_i,
-  output reg [$clog2(OUT_DIM*IN_DIM)-1:0] weight_addr_o,
-  input  wire signed [7:0]                weight_data_i,
-  output reg [OUT_DIM*16-1:0]             out_vec_o,
-  output reg                              done_o
+  input  wire [15:0]                       scale_i,
+  output reg  [$clog2(OUT_DIM*IN_DIM)-1:0] weight_addr_o,
+  input  wire signed [7:0]                 weight_data_i,
+
+  // Streaming output (replaces flat out_vec_o bus)
+  output reg                               out_valid_o,
+  output reg  [15:0]                       out_data_o,
+  output reg  [$clog2(OUT_DIM)-1:0]        out_addr_o,
+
+  output reg                               done_o
 );
 
   localparam ADDR_W = $clog2(OUT_DIM * IN_DIM);
   localparam COL_W  = $clog2(IN_DIM) + 1;
   localparam ROW_W  = $clog2(OUT_DIM) + 1;
 
-  // Dequant pipeline: int8 -> fp16 -> fp16*scale (all combinational)
+  // Dequant pipeline: int8 -> fp16 -> fp16*scale (combinational)
   wire [15:0] w_fp16;
   fp16_from_int8 u_dequant_cvt (
     .val_i(weight_data_i),
@@ -40,7 +53,7 @@ module matvec_fp16 #(
     .prod_o(w_dequant)
   );
 
-  // MAC: dequant_w * in_vec[col] + acc (all combinational, acc registered)
+  // MAC: dequant_w * in_vec[col] + acc
   reg [COL_W-1:0] col;
   wire [15:0] act_val = in_vec_i[col*16 +: 16];
 
@@ -71,6 +84,9 @@ module matvec_fp16 #(
       running       <= 1'b0;
       prefetch      <= 1'b0;
       done_o        <= 1'b0;
+      out_valid_o   <= 1'b0;
+      out_data_o    <= 16'd0;
+      out_addr_o    <= {$clog2(OUT_DIM){1'b0}};
       weight_addr_o <= {ADDR_W{1'b0}};
 
     end else if (start_i) begin
@@ -80,18 +96,24 @@ module matvec_fp16 #(
       running       <= 1'b0;
       prefetch      <= 1'b1;
       done_o        <= 1'b0;
+      out_valid_o   <= 1'b0;
       weight_addr_o <= {ADDR_W{1'b0}};
 
     end else if (prefetch) begin
       prefetch      <= 1'b0;
       running       <= 1'b1;
       weight_addr_o <= weight_addr_o + 1;
+      out_valid_o   <= 1'b0;
 
     end else if (running) begin
+      out_valid_o <= 1'b0;
+      done_o      <= 1'b0;
 
       if (col == IN_DIM[COL_W-1:0] - 1) begin
-        // Last element of row
-        out_vec_o[row*16 +: 16] <= acc_sum;
+        // Last element of row — stream out result
+        out_valid_o <= 1'b1;
+        out_data_o  <= acc_sum;
+        out_addr_o  <= row[$clog2(OUT_DIM)-1:0];
 
         col <= {COL_W{1'b0}};
         acc <= 16'd0;
@@ -102,8 +124,6 @@ module matvec_fp16 #(
           running <= 1'b0;
           done_o  <= 1'b1;
         end
-        // Otherwise: running stays 1, next cycle processes col=0 of next row
-        // BRAM address was already advanced, so weight_data_i will have first weight of next row
 
       end else begin
         acc           <= acc_sum;
@@ -112,13 +132,13 @@ module matvec_fp16 #(
       end
 
     end else begin
-      done_o <= 1'b0;
+      done_o      <= 1'b0;
+      out_valid_o <= 1'b0;
     end
   end
 
 endmodule
 
-// Combinational fp16 adder (same logic as fp16_add but no output register)
 module fp16_add_comb (
   input  wire [15:0] a_i,
   input  wire [15:0] b_i,
@@ -181,31 +201,31 @@ module fp16_add_comb (
                           overflow    ? (mant_sum >> rshift_amt) :
                                         (mant_sum << lshift_amt);
 
-  wire signed [6:0] lg_exp_s = $signed({2'b0, lg_exp});
-  wire signed [6:0] rsh_s    = $signed({3'b0, rshift_amt});
-  wire signed [6:0] lsh_s    = $signed({3'b0, lshift_amt});
+  wire signed [6:0] lg_exp_s  = $signed({2'b0, lg_exp});
+  wire signed [6:0] rsh_s     = $signed({3'b0, rshift_amt});
+  wire signed [6:0] lsh_s     = $signed({3'b0, lshift_amt});
   wire signed [6:0] exp_adj_s = sum_is_zero ? 7'sd0 :
                                 overflow    ? (lg_exp_s + rsh_s) :
                                               (lg_exp_s - lsh_s);
 
-  wire [9:0] trunc_mant = norm_mant[11:2];
-  wire       guard_bit  = norm_mant[1];
-  wire       round_bit  = norm_mant[0];
-  wire       extra_sticky = overflow ? |mant_sum[0] : 1'b0;
-  wire       sticky_bit   = sticky | extra_sticky;
-  wire       use_sticky = sticky_bit & ~eff_sub;
-  wire       round_up = guard_bit & (round_bit | use_sticky | trunc_mant[0]);
+  wire [9:0] trunc_mant    = norm_mant[11:2];
+  wire       guard_bit     = norm_mant[1];
+  wire       round_bit     = norm_mant[0];
+  wire       extra_sticky  = overflow ? |mant_sum[0] : 1'b0;
+  wire       sticky_bit    = sticky | extra_sticky;
+  wire       use_sticky    = sticky_bit & ~eff_sub;
+  wire       round_up      = guard_bit & (round_bit | use_sticky | trunc_mant[0]);
 
-  wire [10:0] rounded_mant = {1'b0, trunc_mant} + {10'd0, round_up};
-  wire        round_ovf = rounded_mant[10];
+  wire [10:0] rounded_mant  = {1'b0, trunc_mant} + {10'd0, round_up};
+  wire        round_ovf     = rounded_mant[10];
   wire signed [6:0] final_exp_s = round_ovf ? (exp_adj_s + 7'sd1) : exp_adj_s;
 
   wire [15:0] normal_result = {lg_sign, final_exp_s[4:0], rounded_mant[9:0]};
-  wire exp_overflow = (final_exp_s >= 7'sd31);
-  wire [15:0] inf_result = {lg_sign, 5'd31, 10'd0};
+  wire exp_overflow  = (final_exp_s >= 7'sd31);
+  wire [15:0] inf_result  = {lg_sign, 5'd31, 10'd0};
   wire exp_underflow = (final_exp_s <= 7'sd0) && !sum_is_zero;
   wire [15:0] zero_result = {lg_sign, 15'd0};
-  wire [15:0] nan_result = 16'h7E00;
+  wire [15:0] nan_result  = 16'h7E00;
 
   reg [15:0] result;
   always @(*) begin

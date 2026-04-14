@@ -1,4 +1,4 @@
-// Hardware SafeSoftmax with bipartite exp(-d) LUT
+ // Hardware SafeSoftmax with bipartite exp(-d) LUT
 //
 // Based on https://www.mdpi.com/2072-666X/17/1/84
 //
