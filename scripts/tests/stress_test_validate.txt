@@ -1,0 +1,29 @@
+Loading resources...
+Loaded tok_emb: 32768 bytes
+Loaded pos_emb: 32768 bytes
+Layer 0: QKV=49152, proj=16384, ff_up=65536, ff_down=65536
+Layer 1: QKV=49152, proj=16384, ff_up=65536, ff_down=65536
+Layer 2: QKV=49152, proj=16384, ff_up=65536, ff_down=65536
+Layer 3: QKV=49152, proj=16384, ff_up=65536, ff_down=65536
+
+Reading: ../../logs/tb_transformer_top_stress.log
+
+Test 0: token=65 'A', 16 generated tokens
+  GEN_TOKEN[0]: xsim=110    'n'  rtl=110    'n'  ideal=110    'n'  OK
+  GEN_TOKEN[1]: xsim=100    'd'  rtl=100    'd'  ideal=100    'd'  OK
+  GEN_TOKEN[2]: xsim= 32    ' '  rtl= 32    ' '  ideal= 32    ' '  OK
+  GEN_TOKEN[3]: xsim=116    't'  rtl=116    't'  ideal=116    't'  OK
+  GEN_TOKEN[4]: xsim=104    'h'  rtl=104    'h'  ideal=104    'h'  OK
+  GEN_TOKEN[5]: xsim=101    'e'  rtl=101    'e'  ideal=101    'e'  OK
+  GEN_TOKEN[6]: xsim= 32    ' '  rtl= 32    ' '  ideal= 32    ' '  OK
+  GEN_TOKEN[7]: xsim=115    's'  rtl=115    's'  ideal=115    's'  OK
+  GEN_TOKEN[8]: xsim=101    'e'  rtl=101    'e'  ideal=101    'e'  OK
+  GEN_TOKEN[9]: xsim=110    'n'  rtl=110    'n'  ideal=110    'n'  OK
+  GEN_TOKEN[10]: xsim=116    't'  rtl=116    't'  ideal=116    't'  OK
+  GEN_TOKEN[11]: xsim=101    'e'  rtl=101    'e'  ideal=101    'e'  OK
+  GEN_TOKEN[12]: xsim=110    'n'  rtl=110    'n'  ideal=110    'n'  OK
+  GEN_TOKEN[13]: xsim= 99    'c'  rtl= 99    'c'  ideal= 99    'c'  OK
+  GEN_TOKEN[14]: xsim=101    'e'  rtl=101    'e'  ideal=101    'e'  OK
+  GEN_TOKEN[15]: xsim= 32    ' '  rtl= 32    ' '  ideal= 32    ' '  OK
+
+PASSED - all 16 outputs match rtl model

@@ -19,9 +19,16 @@ qsys_sync
 .DS_Store
 Thumbs.db
 
+
 # Python
-__pycache__/
+scripts/test/__pycache__/
 *.pyc
 
-# Modelsim output folder
+
+# Modelsim output folders
 work/
+scripts/work/
+
+
+# Documentation
+docs/
