@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Apr 14 13:14:57 2026
+Analysis & Synthesis Status : Successful - Wed Apr 15 13:13:53 2026
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : red_eyes_is_all_you_need_cyclonev
 Top-level Entity Name : transformer_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 29032
+Total registers : 5207
 Total pins : 136
 Total virtual pins : 0
-Total block memory bits : 42,496
-Total DSP Blocks : 25
+Total block memory bits : 26,624
+Total DSP Blocks : 8
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

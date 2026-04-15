@@ -1,0 +1,618 @@
+=== fp16_add (50 tests) ===
+ADD [0] a=3c00 b=3c00 got=4000 exp=4000 OK
+ADD [1] a=3c00 b=bc00 got=0000 exp=0000 OK
+ADD [2] a=4300 b=4080 got=45c0 exp=45c0 OK
+ADD [3] a=5640 b=3800 got=5648 exp=5648 OK
+ADD [4] a=d240 b=4e40 got=ce40 exp=ce40 OK
+ADD [5] a=0000 b=4500 got=4500 exp=4500 OK
+ADD [6] a=4500 b=0000 got=4500 exp=4500 OK
+ADD [7] a=0000 b=0000 got=0000 exp=0000 OK
+ADD [8] a=6400 b=3400 got=6400 exp=6400 OK
+ADD [9] a=5c00 b=dc00 got=0000 exp=0000 OK
+ADD [10] a=3c02 b=bc00 got=1800 exp=1800 OK
+ADD [11] a=7800 b=7800 got=7c00 exp=7c00 OK
+ADD [12] a=7bff b=0000 got=7bff exp=7bff OK
+ADD [13] a=fbff b=bc00 got=fbff exp=fbff OK
+ADD [14] a=7c00 b=3c00 got=7c00 exp=7c00 OK
+ADD [15] a=7c00 b=fc00 got=7e00 exp=7e00 OK
+ADD [16] a=7c00 b=3c00 got=7c00 exp=7c00 OK
+ADD [17] a=0000 b=3c00 got=3c00 exp=3c00 OK
+ADD [18] a=3c00 b=0c00 got=3c00 exp=3c00 OK
+ADD [19] a=3c00 b=1400 got=3c01 exp=3c01 OK
+ADD [20] a=4ef9 b=d5f0 got=d432 exp=d432 OK
+ADD [21] a=d1a0 b=d2eb got=d646 exp=d646 OK
+ADD [22] a=51e9 b=506b got=552a exp=552a OK
+ADD [23] a=54e7 b=d52a got=c430 exp=c430 OK
+ADD [24] a=cbcf b=d5e1 got=d6db exp=d6db OK
+ADD [25] a=d309 b=3c49 got=d2e7 exp=d2e7 OK
+ADD [26] a=d5eb b=d387 got=d8d7 exp=d8d7 OK
+ADD [27] a=4f7f b=487f got=50df exp=50df OK
+ADD [28] a=d2fd b=4c77 got=d0c2 exp=d0c2 OK
+ADD [29] a=53bc b=d62b got=d09a exp=d09a OK
+ADD [30] a=53a5 b=50f4 got=564c exp=564c OK
+ADD [31] a=cffd b=d44e got=d64d exp=d64d OK
+ADD [32] a=55b7 b=d016 got=5358 exp=5358 OK
+ADD [33] a=d517 b=d50b got=d911 exp=d911 OK
+ADD [34] a=5458 b=4d30 got=55a4 exp=55a4 OK
+ADD [35] a=53ae b=51be got=56b6 exp=56b6 OK
+ADD [36] a=473f b=55ea got=565e exp=565e OK
+ADD [37] a=ce13 b=4934 got=caf2 exp=caf2 OK
+ADD [38] a=541e b=4ded got=5599 exp=5599 OK
+ADD [39] a=5485 b=4bbc got=557c exp=557c OK
+ADD [40] a=511d b=d5ad got=d23d exp=d23d OK
+ADD [41] a=d2cd b=d144 got=d608 exp=d608 OK
+ADD [42] a=d541 b=d2ae got=d84c exp=d84c OK
+ADD [43] a=d4fd b=d18d got=d7c4 exp=d7c4 OK
+ADD [44] a=4ec9 b=cec2 got=2f00 exp=2f00 OK
+ADD [45] a=ce7e b=d343 got=d541 exp=d541 OK
+ADD [46] a=d1d3 b=5575 got=5117 exp=5117 OK
+ADD [47] a=4f67 b=4d75 got=526e exp=526e OK
+ADD [48] a=d41c b=51ba got=ccfc exp=ccfc OK
+ADD [49] a=d435 b=ce07 got=d5b7 exp=d5b7 OK
+=== fp16_mul (48 tests) ===
+MUL [0] a=4000 b=4200 got=4600 exp=4600 OK
+MUL [1] a=3c00 b=3c00 got=3c00 exp=3c00 OK
+MUL [2] a=bc00 b=3c00 got=bc00 exp=bc00 OK
+MUL [3] a=c000 b=c200 got=4600 exp=4600 OK
+MUL [4] a=3800 b=3800 got=3400 exp=3400 OK
+MUL [5] a=0000 b=4500 got=0000 exp=0000 OK
+MUL [6] a=4500 b=0000 got=0000 exp=0000 OK
+MUL [7] a=0000 b=0000 got=0000 exp=0000 OK
+MUL [8] a=5c00 b=5c00 got=7c00 exp=7c00 OK
+MUL [9] a=5800 b=3800 got=5400 exp=5400 OK
+MUL [10] a=3400 b=4400 got=3c00 exp=3c00 OK
+MUL [11] a=5c00 b=5bf8 got=7bf8 exp=7bf8 OK
+MUL [12] a=5bf8 b=1c00 got=3bf8 exp=3bf8 OK
+MUL [13] a=7c00 b=4000 got=7c00 exp=7c00 OK
+MUL [14] a=7c00 b=0000 got=7e00 exp=7e00 OK
+MUL [15] a=7c00 b=3c00 got=7c00 exp=7c00 OK
+MUL [16] a=fc00 b=fc00 got=7c00 exp=7c00 OK
+MUL [17] a=211f b=211f got=068e exp=068e OK
+MUL [18] a=d1c5 b=4ce8 got=e314 exp=e314 OK
+MUL [19] a=d073 b=c37e got=582b exp=582b OK
+MUL [20] a=4c4b b=4f53 got=5fdc exp=5fdc OK
+MUL [21] a=c4ae b=b187 got=3a77 exp=3a77 OK
+MUL [22] a=d203 b=c6c3 got=5d15 exp=5d15 OK
+MUL [23] a=ca62 b=5067 got=df06 exp=df06 OK
+MUL [24] a=44b3 b=4e62 got=5780 exp=5780 OK
+MUL [25] a=c698 b=d00c got=5aac exp=5aac OK
+MUL [26] a=5063 b=5001 got=6464 exp=6464 OK
+MUL [27] a=ca35 b=d10e got=5fd8 exp=5fd8 OK
+MUL [28] a=3cf9 b=b670 got=b800 exp=b800 OK
+MUL [29] a=4ecf b=48dc got=5c23 exp=5c23 OK
+MUL [30] a=3957 b=4784 got=4504 exp=4504 OK
+MUL [31] a=ca27 b=d1a3 got=6056 exp=6056 OK
+MUL [32] a=d17c b=5186 got=e793 exp=e793 OK
+MUL [33] a=503d b=cd19 got=e167 exp=e167 OK
+MUL [34] a=50dc b=4073 got=5568 exp=5568 OK
+MUL [35] a=d0f6 b=5072 got=e583 exp=e583 OK
+MUL [36] a=4838 b=5169 got=5db5 exp=5db5 OK
+MUL [37] a=4c7b b=d113 got=e1af exp=e1af OK
+MUL [38] a=4a23 b=4f2c got=5d80 exp=5d80 OK
+MUL [39] a=50fd b=cc38 got=e143 exp=e143 OK
+MUL [40] a=41c7 b=4d07 got=5343 exp=5343 OK
+MUL [41] a=d02a b=505b got=e489 exp=e489 OK
+MUL [42] a=4f06 b=d1a0 got=e4f0 exp=e4f0 OK
+MUL [43] a=4892 b=ca99 got=d78a exp=d78a OK
+MUL [44] a=cfda b=4939 got=dd20 exp=dd20 OK
+MUL [45] a=51dd b=4532 got=5b9e exp=5b9e OK
+MUL [46] a=d0d5 b=b80f got=4ce7 exp=4ce7 OK
+MUL [47] a=4efa b=51b1 got=64f7 exp=64f7 OK
+=== fp16_mac (5 tests) ===
+MAC [0] got=4c00 exp=4c00 OK
+MAC [1] got=0000 exp=0000 OK
+MAC [2] got=d0fe exp=d0fe OK
+MAC [3] got=d765 exp=d765 OK
+MAC [4] got=549e exp=549e OK
+=== fp16_from_int8 (256 tests) ===
+FROM [0] in=00 got=0000 exp=0000 OK
+FROM [1] in=01 got=3c00 exp=3c00 OK
+FROM [2] in=02 got=4000 exp=4000 OK
+FROM [3] in=03 got=4200 exp=4200 OK
+FROM [4] in=04 got=4400 exp=4400 OK
+FROM [5] in=05 got=4500 exp=4500 OK
+FROM [6] in=06 got=4600 exp=4600 OK
+FROM [7] in=07 got=4700 exp=4700 OK
+FROM [8] in=08 got=4800 exp=4800 OK
+FROM [9] in=09 got=4880 exp=4880 OK
+FROM [10] in=0a got=4900 exp=4900 OK
+FROM [11] in=0b got=4980 exp=4980 OK
+FROM [12] in=0c got=4a00 exp=4a00 OK
+FROM [13] in=0d got=4a80 exp=4a80 OK
+FROM [14] in=0e got=4b00 exp=4b00 OK
+FROM [15] in=0f got=4b80 exp=4b80 OK
+FROM [16] in=10 got=4c00 exp=4c00 OK
+FROM [17] in=11 got=4c40 exp=4c40 OK
+FROM [18] in=12 got=4c80 exp=4c80 OK
+FROM [19] in=13 got=4cc0 exp=4cc0 OK
+FROM [20] in=14 got=4d00 exp=4d00 OK
+FROM [21] in=15 got=4d40 exp=4d40 OK
+FROM [22] in=16 got=4d80 exp=4d80 OK
+FROM [23] in=17 got=4dc0 exp=4dc0 OK
+FROM [24] in=18 got=4e00 exp=4e00 OK
+FROM [25] in=19 got=4e40 exp=4e40 OK
+FROM [26] in=1a got=4e80 exp=4e80 OK
+FROM [27] in=1b got=4ec0 exp=4ec0 OK
+FROM [28] in=1c got=4f00 exp=4f00 OK
+FROM [29] in=1d got=4f40 exp=4f40 OK
+FROM [30] in=1e got=4f80 exp=4f80 OK
+FROM [31] in=1f got=4fc0 exp=4fc0 OK
+FROM [32] in=20 got=5000 exp=5000 OK
+FROM [33] in=21 got=5020 exp=5020 OK
+FROM [34] in=22 got=5040 exp=5040 OK
+FROM [35] in=23 got=5060 exp=5060 OK
+FROM [36] in=24 got=5080 exp=5080 OK
+FROM [37] in=25 got=50a0 exp=50a0 OK
+FROM [38] in=26 got=50c0 exp=50c0 OK
+FROM [39] in=27 got=50e0 exp=50e0 OK
+FROM [40] in=28 got=5100 exp=5100 OK
+FROM [41] in=29 got=5120 exp=5120 OK
+FROM [42] in=2a got=5140 exp=5140 OK
+FROM [43] in=2b got=5160 exp=5160 OK
+FROM [44] in=2c got=5180 exp=5180 OK
+FROM [45] in=2d got=51a0 exp=51a0 OK
+FROM [46] in=2e got=51c0 exp=51c0 OK
+FROM [47] in=2f got=51e0 exp=51e0 OK
+FROM [48] in=30 got=5200 exp=5200 OK
+FROM [49] in=31 got=5220 exp=5220 OK
+FROM [50] in=32 got=5240 exp=5240 OK
+FROM [51] in=33 got=5260 exp=5260 OK
+FROM [52] in=34 got=5280 exp=5280 OK
+FROM [53] in=35 got=52a0 exp=52a0 OK
+FROM [54] in=36 got=52c0 exp=52c0 OK
+FROM [55] in=37 got=52e0 exp=52e0 OK
+FROM [56] in=38 got=5300 exp=5300 OK
+FROM [57] in=39 got=5320 exp=5320 OK
+FROM [58] in=3a got=5340 exp=5340 OK
+FROM [59] in=3b got=5360 exp=5360 OK
+FROM [60] in=3c got=5380 exp=5380 OK
+FROM [61] in=3d got=53a0 exp=53a0 OK
+FROM [62] in=3e got=53c0 exp=53c0 OK
+FROM [63] in=3f got=53e0 exp=53e0 OK
+FROM [64] in=40 got=5400 exp=5400 OK
+FROM [65] in=41 got=5410 exp=5410 OK
+FROM [66] in=42 got=5420 exp=5420 OK
+FROM [67] in=43 got=5430 exp=5430 OK
+FROM [68] in=44 got=5440 exp=5440 OK
+FROM [69] in=45 got=5450 exp=5450 OK
+FROM [70] in=46 got=5460 exp=5460 OK
+FROM [71] in=47 got=5470 exp=5470 OK
+FROM [72] in=48 got=5480 exp=5480 OK
+FROM [73] in=49 got=5490 exp=5490 OK
+FROM [74] in=4a got=54a0 exp=54a0 OK
+FROM [75] in=4b got=54b0 exp=54b0 OK
+FROM [76] in=4c got=54c0 exp=54c0 OK
+FROM [77] in=4d got=54d0 exp=54d0 OK
+FROM [78] in=4e got=54e0 exp=54e0 OK
+FROM [79] in=4f got=54f0 exp=54f0 OK
+FROM [80] in=50 got=5500 exp=5500 OK
+FROM [81] in=51 got=5510 exp=5510 OK
+FROM [82] in=52 got=5520 exp=5520 OK
+FROM [83] in=53 got=5530 exp=5530 OK
+FROM [84] in=54 got=5540 exp=5540 OK
+FROM [85] in=55 got=5550 exp=5550 OK
+FROM [86] in=56 got=5560 exp=5560 OK
+FROM [87] in=57 got=5570 exp=5570 OK
+FROM [88] in=58 got=5580 exp=5580 OK
+FROM [89] in=59 got=5590 exp=5590 OK
+FROM [90] in=5a got=55a0 exp=55a0 OK
+FROM [91] in=5b got=55b0 exp=55b0 OK
+FROM [92] in=5c got=55c0 exp=55c0 OK
+FROM [93] in=5d got=55d0 exp=55d0 OK
+FROM [94] in=5e got=55e0 exp=55e0 OK
+FROM [95] in=5f got=55f0 exp=55f0 OK
+FROM [96] in=60 got=5600 exp=5600 OK
+FROM [97] in=61 got=5610 exp=5610 OK
+FROM [98] in=62 got=5620 exp=5620 OK
+FROM [99] in=63 got=5630 exp=5630 OK
+FROM [100] in=64 got=5640 exp=5640 OK
+FROM [101] in=65 got=5650 exp=5650 OK
+FROM [102] in=66 got=5660 exp=5660 OK
+FROM [103] in=67 got=5670 exp=5670 OK
+FROM [104] in=68 got=5680 exp=5680 OK
+FROM [105] in=69 got=5690 exp=5690 OK
+FROM [106] in=6a got=56a0 exp=56a0 OK
+FROM [107] in=6b got=56b0 exp=56b0 OK
+FROM [108] in=6c got=56c0 exp=56c0 OK
+FROM [109] in=6d got=56d0 exp=56d0 OK
+FROM [110] in=6e got=56e0 exp=56e0 OK
+FROM [111] in=6f got=56f0 exp=56f0 OK
+FROM [112] in=70 got=5700 exp=5700 OK
+FROM [113] in=71 got=5710 exp=5710 OK
+FROM [114] in=72 got=5720 exp=5720 OK
+FROM [115] in=73 got=5730 exp=5730 OK
+FROM [116] in=74 got=5740 exp=5740 OK
+FROM [117] in=75 got=5750 exp=5750 OK
+FROM [118] in=76 got=5760 exp=5760 OK
+FROM [119] in=77 got=5770 exp=5770 OK
+FROM [120] in=78 got=5780 exp=5780 OK
+FROM [121] in=79 got=5790 exp=5790 OK
+FROM [122] in=7a got=57a0 exp=57a0 OK
+FROM [123] in=7b got=57b0 exp=57b0 OK
+FROM [124] in=7c got=57c0 exp=57c0 OK
+FROM [125] in=7d got=57d0 exp=57d0 OK
+FROM [126] in=7e got=57e0 exp=57e0 OK
+FROM [127] in=7f got=57f0 exp=57f0 OK
+FROM [128] in=80 got=d800 exp=d800 OK
+FROM [129] in=81 got=d7f0 exp=d7f0 OK
+FROM [130] in=82 got=d7e0 exp=d7e0 OK
+FROM [131] in=83 got=d7d0 exp=d7d0 OK
+FROM [132] in=84 got=d7c0 exp=d7c0 OK
+FROM [133] in=85 got=d7b0 exp=d7b0 OK
+FROM [134] in=86 got=d7a0 exp=d7a0 OK
+FROM [135] in=87 got=d790 exp=d790 OK
+FROM [136] in=88 got=d780 exp=d780 OK
+FROM [137] in=89 got=d770 exp=d770 OK
+FROM [138] in=8a got=d760 exp=d760 OK
+FROM [139] in=8b got=d750 exp=d750 OK
+FROM [140] in=8c got=d740 exp=d740 OK
+FROM [141] in=8d got=d730 exp=d730 OK
+FROM [142] in=8e got=d720 exp=d720 OK
+FROM [143] in=8f got=d710 exp=d710 OK
+FROM [144] in=90 got=d700 exp=d700 OK
+FROM [145] in=91 got=d6f0 exp=d6f0 OK
+FROM [146] in=92 got=d6e0 exp=d6e0 OK
+FROM [147] in=93 got=d6d0 exp=d6d0 OK
+FROM [148] in=94 got=d6c0 exp=d6c0 OK
+FROM [149] in=95 got=d6b0 exp=d6b0 OK
+FROM [150] in=96 got=d6a0 exp=d6a0 OK
+FROM [151] in=97 got=d690 exp=d690 OK
+FROM [152] in=98 got=d680 exp=d680 OK
+FROM [153] in=99 got=d670 exp=d670 OK
+FROM [154] in=9a got=d660 exp=d660 OK
+FROM [155] in=9b got=d650 exp=d650 OK
+FROM [156] in=9c got=d640 exp=d640 OK
+FROM [157] in=9d got=d630 exp=d630 OK
+FROM [158] in=9e got=d620 exp=d620 OK
+FROM [159] in=9f got=d610 exp=d610 OK
+FROM [160] in=a0 got=d600 exp=d600 OK
+FROM [161] in=a1 got=d5f0 exp=d5f0 OK
+FROM [162] in=a2 got=d5e0 exp=d5e0 OK
+FROM [163] in=a3 got=d5d0 exp=d5d0 OK
+FROM [164] in=a4 got=d5c0 exp=d5c0 OK
+FROM [165] in=a5 got=d5b0 exp=d5b0 OK
+FROM [166] in=a6 got=d5a0 exp=d5a0 OK
+FROM [167] in=a7 got=d590 exp=d590 OK
+FROM [168] in=a8 got=d580 exp=d580 OK
+FROM [169] in=a9 got=d570 exp=d570 OK
+FROM [170] in=aa got=d560 exp=d560 OK
+FROM [171] in=ab got=d550 exp=d550 OK
+FROM [172] in=ac got=d540 exp=d540 OK
+FROM [173] in=ad got=d530 exp=d530 OK
+FROM [174] in=ae got=d520 exp=d520 OK
+FROM [175] in=af got=d510 exp=d510 OK
+FROM [176] in=b0 got=d500 exp=d500 OK
+FROM [177] in=b1 got=d4f0 exp=d4f0 OK
+FROM [178] in=b2 got=d4e0 exp=d4e0 OK
+FROM [179] in=b3 got=d4d0 exp=d4d0 OK
+FROM [180] in=b4 got=d4c0 exp=d4c0 OK
+FROM [181] in=b5 got=d4b0 exp=d4b0 OK
+FROM [182] in=b6 got=d4a0 exp=d4a0 OK
+FROM [183] in=b7 got=d490 exp=d490 OK
+FROM [184] in=b8 got=d480 exp=d480 OK
+FROM [185] in=b9 got=d470 exp=d470 OK
+FROM [186] in=ba got=d460 exp=d460 OK
+FROM [187] in=bb got=d450 exp=d450 OK
+FROM [188] in=bc got=d440 exp=d440 OK
+FROM [189] in=bd got=d430 exp=d430 OK
+FROM [190] in=be got=d420 exp=d420 OK
+FROM [191] in=bf got=d410 exp=d410 OK
+FROM [192] in=c0 got=d400 exp=d400 OK
+FROM [193] in=c1 got=d3e0 exp=d3e0 OK
+FROM [194] in=c2 got=d3c0 exp=d3c0 OK
+FROM [195] in=c3 got=d3a0 exp=d3a0 OK
+FROM [196] in=c4 got=d380 exp=d380 OK
+FROM [197] in=c5 got=d360 exp=d360 OK
+FROM [198] in=c6 got=d340 exp=d340 OK
+FROM [199] in=c7 got=d320 exp=d320 OK
+FROM [200] in=c8 got=d300 exp=d300 OK
+FROM [201] in=c9 got=d2e0 exp=d2e0 OK
+FROM [202] in=ca got=d2c0 exp=d2c0 OK
+FROM [203] in=cb got=d2a0 exp=d2a0 OK
+FROM [204] in=cc got=d280 exp=d280 OK
+FROM [205] in=cd got=d260 exp=d260 OK
+FROM [206] in=ce got=d240 exp=d240 OK
+FROM [207] in=cf got=d220 exp=d220 OK
+FROM [208] in=d0 got=d200 exp=d200 OK
+FROM [209] in=d1 got=d1e0 exp=d1e0 OK
+FROM [210] in=d2 got=d1c0 exp=d1c0 OK
+FROM [211] in=d3 got=d1a0 exp=d1a0 OK
+FROM [212] in=d4 got=d180 exp=d180 OK
+FROM [213] in=d5 got=d160 exp=d160 OK
+FROM [214] in=d6 got=d140 exp=d140 OK
+FROM [215] in=d7 got=d120 exp=d120 OK
+FROM [216] in=d8 got=d100 exp=d100 OK
+FROM [217] in=d9 got=d0e0 exp=d0e0 OK
+FROM [218] in=da got=d0c0 exp=d0c0 OK
+FROM [219] in=db got=d0a0 exp=d0a0 OK
+FROM [220] in=dc got=d080 exp=d080 OK
+FROM [221] in=dd got=d060 exp=d060 OK
+FROM [222] in=de got=d040 exp=d040 OK
+FROM [223] in=df got=d020 exp=d020 OK
+FROM [224] in=e0 got=d000 exp=d000 OK
+FROM [225] in=e1 got=cfc0 exp=cfc0 OK
+FROM [226] in=e2 got=cf80 exp=cf80 OK
+FROM [227] in=e3 got=cf40 exp=cf40 OK
+FROM [228] in=e4 got=cf00 exp=cf00 OK
+FROM [229] in=e5 got=cec0 exp=cec0 OK
+FROM [230] in=e6 got=ce80 exp=ce80 OK
+FROM [231] in=e7 got=ce40 exp=ce40 OK
+FROM [232] in=e8 got=ce00 exp=ce00 OK
+FROM [233] in=e9 got=cdc0 exp=cdc0 OK
+FROM [234] in=ea got=cd80 exp=cd80 OK
+FROM [235] in=eb got=cd40 exp=cd40 OK
+FROM [236] in=ec got=cd00 exp=cd00 OK
+FROM [237] in=ed got=ccc0 exp=ccc0 OK
+FROM [238] in=ee got=cc80 exp=cc80 OK
+FROM [239] in=ef got=cc40 exp=cc40 OK
+FROM [240] in=f0 got=cc00 exp=cc00 OK
+FROM [241] in=f1 got=cb80 exp=cb80 OK
+FROM [242] in=f2 got=cb00 exp=cb00 OK
+FROM [243] in=f3 got=ca80 exp=ca80 OK
+FROM [244] in=f4 got=ca00 exp=ca00 OK
+FROM [245] in=f5 got=c980 exp=c980 OK
+FROM [246] in=f6 got=c900 exp=c900 OK
+FROM [247] in=f7 got=c880 exp=c880 OK
+FROM [248] in=f8 got=c800 exp=c800 OK
+FROM [249] in=f9 got=c700 exp=c700 OK
+FROM [250] in=fa got=c600 exp=c600 OK
+FROM [251] in=fb got=c500 exp=c500 OK
+FROM [252] in=fc got=c400 exp=c400 OK
+FROM [253] in=fd got=c200 exp=c200 OK
+FROM [254] in=fe got=c000 exp=c000 OK
+FROM [255] in=ff got=bc00 exp=bc00 OK
+=== fp16_to_int8 (51 tests) ===
+TO [0] in=0000 got=00 exp=00 OK
+TO [1] in=3c00 got=01 exp=01 OK
+TO [2] in=bc00 got=ff exp=ff OK
+TO [3] in=3800 got=00 exp=00 OK
+TO [4] in=b800 got=00 exp=00 OK
+TO [5] in=57f0 got=7f exp=7f OK
+TO [6] in=d800 got=80 exp=80 OK
+TO [7] in=57f8 got=7f exp=7f OK
+TO [8] in=d804 got=80 exp=80 OK
+TO [9] in=5a40 got=7f exp=7f OK
+TO [10] in=da40 got=80 exp=80 OK
+TO [11] in=3400 got=00 exp=00 OK
+TO [12] in=b400 got=00 exp=00 OK
+TO [13] in=3a00 got=01 exp=01 OK
+TO [14] in=ba00 got=ff exp=ff OK
+TO [15] in=3e00 got=02 exp=02 OK
+TO [16] in=4100 got=02 exp=02 OK
+TO [17] in=4300 got=04 exp=04 OK
+TO [18] in=be00 got=fe exp=fe OK
+TO [19] in=c100 got=fe exp=fe OK
+TO [20] in=7bff got=7f exp=7f OK
+TO [21] in=fbff got=80 exp=80 OK
+TO [22] in=7c00 got=7f exp=7f OK
+TO [23] in=fc00 got=80 exp=80 OK
+TO [24] in=7c00 got=7f exp=7f OK
+TO [25] in=2e66 got=00 exp=00 OK
+TO [26] in=ae66 got=00 exp=00 OK
+TO [27] in=5140 got=2a exp=2a OK
+TO [28] in=d140 got=d6 exp=d6 OK
+TO [29] in=5640 got=64 exp=64 OK
+TO [30] in=d640 got=9c exp=9c OK
+TO [31] in=cedc got=e5 exp=e5 OK
+TO [32] in=4a4c got=0d exp=0d OK
+TO [33] in=56ca got=6d exp=6d OK
+TO [34] in=d610 got=9f exp=9f OK
+TO [35] in=d527 got=ae exp=ae OK
+TO [36] in=d86a got=80 exp=80 OK
+TO [37] in=d730 got=8d exp=8d OK
+TO [38] in=d89b got=80 exp=80 OK
+TO [39] in=d670 got=99 exp=99 OK
+TO [40] in=441d got=04 exp=04 OK
+TO [41] in=5897 got=7f exp=7f OK
+TO [42] in=5342 got=3a exp=3a OK
+TO [43] in=d08f got=dc exp=dc OK
+TO [44] in=cf1f got=e4 exp=e4 OK
+TO [45] in=532d got=39 exp=39 OK
+TO [46] in=d285 got=cc exp=cc OK
+TO [47] in=d7ff got=80 exp=80 OK
+TO [48] in=5667 got=66 exp=66 OK
+TO [49] in=5065 got=23 exp=23 OK
+TO [50] in=d746 got=8c exp=8c OK
+=== fp16_to_q167 (57 tests) ===
+Q167 [0] in=0000 got=000000 exp=000000 OK
+Q167 [1] in=3c00 got=000080 exp=000080 OK
+Q167 [2] in=bc00 got=ffff80 exp=ffff80 OK
+Q167 [3] in=3800 got=000040 exp=000040 OK
+Q167 [4] in=b800 got=ffffc0 exp=ffffc0 OK
+Q167 [5] in=3400 got=000020 exp=000020 OK
+Q167 [6] in=b400 got=ffffe0 exp=ffffe0 OK
+Q167 [7] in=2000 got=000001 exp=000001 OK
+Q167 [8] in=a000 got=ffffff exp=ffffff OK
+Q167 [9] in=57f0 got=003f80 exp=003f80 OK
+Q167 [10] in=d800 got=ffc000 exp=ffc000 OK
+Q167 [11] in=5bf8 got=007f80 exp=007f80 OK
+Q167 [12] in=dbf8 got=ff8080 exp=ff8080 OK
+Q167 [13] in=5c00 got=008000 exp=008000 OK
+Q167 [14] in=dc00 got=ff8000 exp=ff8000 OK
+Q167 [15] in=63d0 got=01f400 exp=01f400 OK
+Q167 [16] in=e3d0 got=fe0c00 exp=fe0c00 OK
+Q167 [17] in=7bff got=7ff000 exp=7ff000 OK
+Q167 [18] in=fbff got=801000 exp=801000 OK
+Q167 [19] in=1c00 got=000000 exp=000000 OK
+Q167 [20] in=5648 got=003240 exp=003240 OK
+Q167 [21] in=d648 got=ffcdc0 exp=ffcdc0 OK
+Q167 [22] in=2e66 got=00000d exp=00000d OK
+Q167 [23] in=ae66 got=fffff3 exp=fffff3 OK
+Q167 [24] in=7c00 got=7fffff exp=7fffff OK
+Q167 [25] in=fc00 got=800000 exp=800000 OK
+Q167 [26] in=7c00 got=7fffff exp=7fffff OK
+Q167 [27] in=7a36 got=636000 exp=636000 OK
+Q167 [28] in=f266 got=e66800 exp=e66800 OK
+Q167 [29] in=71ab got=16ac00 exp=16ac00 OK
+Q167 [30] in=79c1 got=5c1000 exp=5c1000 OK
+Q167 [31] in=f857 got=ba9000 exp=ba9000 OK
+Q167 [32] in=6806 got=040600 exp=040600 OK
+Q167 [33] in=715b got=156c00 exp=156c00 OK
+Q167 [34] in=7b27 got=727000 exp=727000 OK
+Q167 [35] in=fb7b got=885000 exp=885000 OK
+Q167 [36] in=fae5 got=91b000 exp=91b000 OK
+Q167 [37] in=f5c1 got=d1f800 exp=d1f800 OK
+Q167 [38] in=7933 got=533000 exp=533000 OK
+Q167 [39] in=797d got=57d000 exp=57d000 OK
+Q167 [40] in=f9d5 got=a2b000 exp=a2b000 OK
+Q167 [41] in=7ab6 got=6b6000 exp=6b6000 OK
+Q167 [42] in=6b1b got=071b00 exp=071b00 OK
+Q167 [43] in=7b7c got=77c000 exp=77c000 OK
+Q167 [44] in=7af3 got=6f3000 exp=6f3000 OK
+Q167 [45] in=fa83 got=97d000 exp=97d000 OK
+Q167 [46] in=7b96 got=796000 exp=796000 OK
+Q167 [47] in=e970 got=fa9000 exp=fa9000 OK
+Q167 [48] in=f980 got=a80000 exp=a80000 OK
+Q167 [49] in=ec66 got=f73400 exp=f73400 OK
+Q167 [50] in=facf got=931000 exp=931000 OK
+Q167 [51] in=77f6 got=3fb000 exp=3fb000 OK
+Q167 [52] in=6daf got=0b5e00 exp=0b5e00 OK
+Q167 [53] in=fa3f got=9c1000 exp=9c1000 OK
+Q167 [54] in=f860 got=ba0000 exp=ba0000 OK
+Q167 [55] in=62ba got=01ae80 exp=01ae80 OK
+Q167 [56] in=7874 got=474000 exp=474000 OK
+=== q115_to_fp16 (66 tests) ===
+Q115 [0] in=0000 got=0000 exp=0000 OK
+Q115 [1] in=0001 got=0000 exp=0000 OK
+Q115 [2] in=0002 got=0400 exp=0400 OK
+Q115 [3] in=0004 got=0800 exp=0800 OK
+Q115 [4] in=0008 got=0c00 exp=0c00 OK
+Q115 [5] in=0010 got=1000 exp=1000 OK
+Q115 [6] in=0020 got=1400 exp=1400 OK
+Q115 [7] in=0040 got=1800 exp=1800 OK
+Q115 [8] in=0080 got=1c00 exp=1c00 OK
+Q115 [9] in=0100 got=2000 exp=2000 OK
+Q115 [10] in=0200 got=2400 exp=2400 OK
+Q115 [11] in=0400 got=2800 exp=2800 OK
+Q115 [12] in=8000 got=3c00 exp=3c00 OK
+Q115 [13] in=4000 got=3800 exp=3800 OK
+Q115 [14] in=2000 got=3400 exp=3400 OK
+Q115 [15] in=7fff got=3c00 exp=3c00 OK
+Q115 [16] in=07ff got=2bff exp=2bff OK
+Q115 [17] in=0800 got=2c00 exp=2c00 OK
+Q115 [18] in=0801 got=2c00 exp=2c00 OK
+Q115 [19] in=0bff got=2e00 exp=2e00 OK
+Q115 [20] in=0c00 got=2e00 exp=2e00 OK
+Q115 [21] in=0c01 got=2e00 exp=2e00 OK
+Q115 [22] in=0fff got=3000 exp=3000 OK
+Q115 [23] in=1000 got=3000 exp=3000 OK
+Q115 [24] in=1001 got=3000 exp=3000 OK
+Q115 [25] in=17ff got=3200 exp=3200 OK
+Q115 [26] in=1800 got=3200 exp=3200 OK
+Q115 [27] in=1801 got=3200 exp=3200 OK
+Q115 [28] in=3fff got=3800 exp=3800 OK
+Q115 [29] in=4001 got=3800 exp=3800 OK
+Q115 [30] in=5fff got=3a00 exp=3a00 OK
+Q115 [31] in=6000 got=3a00 exp=3a00 OK
+Q115 [32] in=6001 got=3a00 exp=3a00 OK
+Q115 [33] in=7fbc got=3bfc exp=3bfc OK
+Q115 [34] in=7fee got=3bff exp=3bff OK
+Q115 [35] in=7ff8 got=3c00 exp=3c00 OK
+Q115 [36] in=5a12 got=39a1 exp=39a1 OK
+Q115 [37] in=1001 got=3000 exp=3000 OK
+Q115 [38] in=6e20 got=3ae2 exp=3ae2 OK
+Q115 [39] in=7423 got=3b42 exp=3b42 OK
+Q115 [40] in=57ed got=397f exp=397f OK
+Q115 [41] in=41e6 got=381e exp=381e OK
+Q115 [42] in=62f5 got=3a2f exp=3a2f OK
+Q115 [43] in=6475 got=3a47 exp=3a47 OK
+Q115 [44] in=0a78 got=2d3c exp=2d3c OK
+Q115 [45] in=6b24 got=3ab2 exp=3ab2 OK
+Q115 [46] in=060e got=2a0e exp=2a0e OK
+Q115 [47] in=1a3a got=328e exp=328e OK
+Q115 [48] in=0029 got=1520 exp=1520 OK
+Q115 [49] in=4388 got=3838 exp=3838 OK
+Q115 [50] in=7b47 got=3bb4 exp=3bb4 OK
+Q115 [51] in=0256 got=24ac exp=24ac OK
+Q115 [52] in=50c9 got=390d exp=390d OK
+Q115 [53] in=6d7d got=3ad8 exp=3ad8 OK
+Q115 [54] in=3ae4 got=375c exp=375c OK
+Q115 [55] in=3cdc got=379c exp=379c OK
+Q115 [56] in=5bec got=39bf exp=39bf OK
+Q115 [57] in=7135 got=3b13 exp=3b13 OK
+Q115 [58] in=3df6 got=37bf exp=37bf OK
+Q115 [59] in=0883 got=2c42 exp=2c42 OK
+Q115 [60] in=5fc9 got=39fd exp=39fd OK
+Q115 [61] in=5a7b got=39a8 exp=39a8 OK
+Q115 [62] in=5787 got=3978 exp=3978 OK
+Q115 [63] in=322b got=3645 exp=3645 OK
+Q115 [64] in=3d16 got=37a3 exp=37a3 OK
+Q115 [65] in=0908 got=2c84 exp=2c84 OK
+=== fp16_rsqrt (62 tests) ===
+RSQRT [0] in=3c00 got=3c00 exp=3c00 OK
+RSQRT [1] in=4400 got=3800 exp=3800 OK
+RSQRT [2] in=4880 got=3555 exp=3555 OK
+RSQRT [3] in=4c00 got=3400 exp=3400 OK
+RSQRT [4] in=4e40 got=3266 exp=3266 OK
+RSQRT [5] in=5400 got=3000 exp=3000 OK
+RSQRT [6] in=5640 got=2e66 exp=2e66 OK
+RSQRT [7] in=5c00 got=2c00 exp=2c00 OK
+RSQRT [8] in=3800 got=3da8 exp=3da8 OK
+RSQRT [9] in=4000 got=39a8 exp=39a8 OK
+RSQRT [10] in=4800 got=35a8 exp=35a8 OK
+RSQRT [11] in=5000 got=31a8 exp=31a8 OK
+RSQRT [12] in=5800 got=2da8 exp=2da8 OK
+RSQRT [13] in=6000 got=29a8 exp=29a8 OK
+RSQRT [14] in=6400 got=2800 exp=2800 OK
+RSQRT [15] in=6c00 got=2400 exp=2400 OK
+RSQRT [16] in=0400 got=5800 exp=5800 OK
+RSQRT [17] in=0c00 got=5400 exp=5400 OK
+RSQRT [18] in=1800 got=4da8 exp=4da8 OK
+RSQRT [19] in=70e2 got=2120 exp=2120 OK
+RSQRT [20] in=7a1a got=1c95 exp=1c95 OK
+RSQRT [21] in=7bff got=1c01 exp=1c01 OK
+RSQRT [22] in=3e00 got=3a88 exp=3a88 OK
+RSQRT [23] in=4100 got=390f exp=390f OK
+RSQRT [24] in=4248 got=3884 exp=3884 OK
+RSQRT [25] in=4700 got=360c exp=360c OK
+RSQRT [26] in=4a80 got=3470 exp=3470 OK
+RSQRT [27] in=5140 got=30f0 exp=30f0 OK
+RSQRT [28] in=2e66 got=4254 exp=4254 OK
+RSQRT [29] in=34cd got=3f4e exp=3f4e OK
+RSQRT [30] in=0000 got=7c00 exp=7c00 OK
+RSQRT [31] in=7c00 got=0000 exp=0000 OK
+RSQRT [32] in=7862 got=1d69 exp=1d69 OK
+RSQRT [33] in=7038 got=2182 exp=2182 OK
+RSQRT [34] in=79b1 got=1cbe exp=1cbe OK
+RSQRT [35] in=74d5 got=1f48 exp=1f48 OK
+RSQRT [36] in=7b81 got=1c22 exp=1c22 OK
+RSQRT [37] in=722a got=208f exp=208f OK
+RSQRT [38] in=7a18 got=1c95 exp=1c95 OK
+RSQRT [39] in=714c got=20ea exp=20ea OK
+RSQRT [40] in=7bba got=1c12 exp=1c12 OK
+RSQRT [41] in=7afc got=1c48 exp=1c48 OK
+RSQRT [42] in=6ee1 got=221a exp=221a OK
+RSQRT [43] in=7931 got=1cf8 exp=1cf8 OK
+RSQRT [44] in=72f9 got=2049 exp=2049 OK
+RSQRT [45] in=7817 got=1d9a exp=1d9a OK
+RSQRT [46] in=7acd got=1c57 exp=1c57 OK
+RSQRT [47] in=70f4 got=2115 exp=2115 OK
+RSQRT [48] in=72f2 got=204c exp=204c OK
+RSQRT [49] in=6cb1 got=2364 exp=2364 OK
+RSQRT [50] in=6c10 got=23f0 exp=23f0 OK
+RSQRT [51] in=77fa got=1dab exp=1dab OK
+RSQRT [52] in=7137 got=20f6 exp=20f6 OK
+RSQRT [53] in=701f got=2195 exp=2195 OK
+RSQRT [54] in=7995 got=1cca exp=1cca OK
+RSQRT [55] in=74aa got=1f6a exp=1f6a OK
+RSQRT [56] in=756c got=1edf exp=1edf OK
+RSQRT [57] in=7567 got=1ee4 exp=1ee4 OK
+RSQRT [58] in=7abb got=1c5d exp=1c5d OK
+RSQRT [59] in=7459 got=1fad exp=1fad OK
+RSQRT [60] in=792f got=1cfa exp=1cfa OK
+RSQRT [61] in=7b7c got=1c23 exp=1c23 OK
+=== matvec_fp16 4x4 ===
+MV1 [0] got=45ad exp=45ad OK
+MV1 [1] got=38b8 exp=38b8 OK
+MV1 [2] got=c204 exp=c204 OK
+MV1 [3] got=4459 exp=4459 OK
+=== matvec_fp16 8x4 ===
+MV2 [0] got=30d3 exp=30d3 OK
+MV2 [1] got=bd6e exp=bd6e OK
+MV2 [2] got=368d exp=368d OK
+MV2 [3] got=c37e exp=c37e OK
+MV2 [4] got=41c5 exp=41c5 OK
+MV2 [5] got=4122 exp=4122 OK
+MV2 [6] got=3fda exp=3fda OK
+MV2 [7] got=30bc exp=30bc OK
+=== All tests passed ===

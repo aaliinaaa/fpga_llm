@@ -1,5 +1,5 @@
 Flow report for red_eyes_is_all_you_need_cyclonev
-Tue Apr 14 20:20:31 2026
+Wed Apr 15 13:21:37 2026
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Flow Failed - Tue Apr 14 20:20:31 2026      ;
+; Flow Status                     ; Successful - Wed Apr 15 13:21:36 2026       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; red_eyes_is_all_you_need_cyclonev           ;
 ; Top-level Entity Name           ; transformer_top                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 27,752 / 41,910 ( 66 % )                    ;
-; Total registers                 ; 29032                                       ;
+; Logic utilization (in ALMs)     ; 3,903 / 41,910 ( 9 % )                      ;
+; Total registers                 ; 5207                                        ;
 ; Total pins                      ; 136 / 499 ( 27 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 42,496 / 5,662,720 ( < 1 % )                ;
-; Total DSP Blocks                ; 25 / 112 ( 22 % )                           ;
+; Total block memory bits         ; 26,624 / 5,662,720 ( < 1 % )                ;
+; Total DSP Blocks                ; 8 / 112 ( 7 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+-----------------------------------+
 ; Option            ; Setting                           ;
 +-------------------+-----------------------------------+
-; Start date & time ; 04/14/2026 13:13:30               ;
+; Start date & time ; 04/15/2026 13:12:47               ;
 ; Main task         ; Compilation                       ;
 ; Revision Name     ; red_eyes_is_all_you_need_cyclonev ;
 +-------------------+-----------------------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------------------------+-----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value                     ; Entity Name     ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------------------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 198112235220407.177615441007992        ; --                                ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1097312618536.177623356705448          ; --                                ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                                ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                                ; --              ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                    ; --                                ; --              ; --         ;
@@ -100,10 +100,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:23     ; 1.7                     ; 5316 MB             ; 00:02:11                           ;
-; Fitter               ; 00:07:46     ; 1.2                     ; 7284 MB             ; 00:19:30                           ;
-; Fitter               ; 00:07:16     ; 1.2                     ; 7313 MB             ; 00:18:48                           ;
-; Total                ; 00:16:25     ; --                      ; --                  ; 00:40:29                           ;
+; Analysis & Synthesis ; 00:01:04     ; 1.7                     ; 5003 MB             ; 00:01:51                           ;
+; Fitter               ; 00:07:33     ; 1.2                     ; 6626 MB             ; 00:15:33                           ;
+; Total                ; 00:08:37     ; --                      ; --                  ; 00:17:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,9 +111,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-S8G1CQN  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-S8G1CQN  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-S8G1CQN  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-57PKEHA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-57PKEHA  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -122,7 +120,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off red_eyes_is_all_you_need_cyclonev -c red_eyes_is_all_you_need_cyclonev
-quartus_fit --read_settings_files=on --write_settings_files=off red_eyes_is_all_you_need_cyclonev -c red_eyes_is_all_you_need_cyclonev
 quartus_fit --read_settings_files=on --write_settings_files=off red_eyes_is_all_you_need_cyclonev -c red_eyes_is_all_you_need_cyclonev
 
 

@@ -1,19 +1,41 @@
-// Matrix-vector multiply: int8 weights x fp16 input -> fp16 output (streaming)
+// Matrix-vector multiply: int8 weights x fp16 input -> fp16 output
 //
-// Optimisation vs original:
-//   out_vec_o [OUT_DIM*16-1:0] REMOVED — was the dominant FF cost
-//   (512x16=8192 FF for ff_up, 384x16=6144 FF for qkv, etc.)
+// Streaming INPUT interface (eliminates wide in_vec_i bus and its fanout):
+//   in_valid_i  — caller asserts for IN_DIM consecutive cycles
+//   in_data_i   — fp16 input element for current column
+//   in_ready_o  — asserted when matvec is ready to accept input
 //
-// New streaming output interface:
-//   out_valid_o  — pulses 1 cycle when a row is complete
-//   out_data_o   — fp16 result for that row
-//   out_addr_o   — row index (0..OUT_DIM-1)
+// Streaming OUTPUT interface (no out_vec_o register):
+//   out_valid_o — pulses 1 cycle when a row is complete
+//   out_data_o  — fp16 result for that row
+//   out_addr_o  — row index (0..OUT_DIM-1)
 //
-// The caller must capture each element into M10K or a register as it arrives.
-// done_o still pulses 1 cycle after the last out_valid_o.
+// Protocol:
+//   1. Assert start_i for 1 cycle
+//   2. For each of OUT_DIM rows, stream IN_DIM elements via in_valid_i/in_data_i
+//      (matvec re-uses the same input stream for each row — caller must
+//       provide the full vector once per row, i.e. IN_DIM*OUT_DIM total elements
+//       in row-major order matching the weight matrix)
 //
-// Latency unchanged: OUT_DIM * IN_DIM + 2 cycles
-// 1 cycle per element after initial BRAM prefetch
+// WAIT — simpler protocol: caller streams the input vector ONCE.
+// matvec internally cycles through all OUT_DIM rows, requesting the
+// input vector OUT_DIM times. We use an internal column counter and
+// req_o / ack handshake:
+//
+// Actually simplest: caller provides input from a RAM with address driven
+// by matvec. We expose col_addr_o so caller can read from its RAM.
+//
+// Interface:
+//   col_addr_o [$clog2(IN_DIM)-1:0] — column address matvec wants to read
+//   col_data_i [15:0]               — input data from caller's RAM (1-cycle latency)
+//   col_req_o                       — asserted when col_addr_o is valid
+//
+// The caller connects col_addr_o to its RAM read address and col_data_i
+// to the RAM read data (registered). matvec handles the 1-cycle latency.
+//
+// Weight interface unchanged: weight_addr_o / weight_data_i (BRAM, 1-cycle latency)
+//
+// Latency: OUT_DIM * (IN_DIM + 1) + 2 cycles  (extra cycle per row for latency)
 
 module matvec_fp16 #(
   parameter IN_DIM  = 128,
@@ -22,105 +44,103 @@ module matvec_fp16 #(
   input  wire                              clk_i,
   input  wire                              rst_i,
   input  wire                              start_i,
-  input  wire [IN_DIM*16-1:0]             in_vec_i,
-  input  wire [15:0]                       scale_i,
+
+  // Input vector via RAM interface (replaces wide in_vec_i bus)
+  output reg  [$clog2(IN_DIM)-1:0]         col_addr_o,   // column to read
+  input  wire [15:0]                        col_data_i,   // data (1-cycle latency)
+
+  input  wire [15:0]                        scale_i,
   output reg  [$clog2(OUT_DIM*IN_DIM)-1:0] weight_addr_o,
-  input  wire signed [7:0]                 weight_data_i,
+  input  wire signed [7:0]                  weight_data_i,
 
-  // Streaming output (replaces flat out_vec_o bus)
-  output reg                               out_valid_o,
-  output reg  [15:0]                       out_data_o,
-  output reg  [$clog2(OUT_DIM)-1:0]        out_addr_o,
+  // Streaming output
+  output reg                                out_valid_o,
+  output reg  [15:0]                        out_data_o,
+  output reg  [$clog2(OUT_DIM)-1:0]         out_addr_o,
 
-  output reg                               done_o
+  output reg                                done_o
 );
 
-  localparam ADDR_W = $clog2(OUT_DIM * IN_DIM);
-  localparam COL_W  = $clog2(IN_DIM) + 1;
-  localparam ROW_W  = $clog2(OUT_DIM) + 1;
+  localparam ADDR_W  = $clog2(OUT_DIM * IN_DIM);
+  localparam COL_W   = $clog2(IN_DIM);
+  localparam ROW_W   = $clog2(OUT_DIM);
 
-  // Dequant pipeline: int8 -> fp16 -> fp16*scale (combinational)
+  // Dequant: int8 -> fp16 -> * scale
   wire [15:0] w_fp16;
-  fp16_from_int8 u_dequant_cvt (
-    .val_i(weight_data_i),
-    .fp16_o(w_fp16)
-  );
+  fp16_from_int8 u_dequant_cvt (.val_i(weight_data_i), .fp16_o(w_fp16));
 
   wire [15:0] w_dequant;
-  fp16_mul_comb u_dequant_mul (
-    .a_i(w_fp16),
-    .b_i(scale_i),
-    .prod_o(w_dequant)
-  );
+  fp16_mul_comb u_dequant_mul (.a_i(w_fp16), .b_i(scale_i), .prod_o(w_dequant));
 
-  // MAC: dequant_w * in_vec[col] + acc
-  reg [COL_W-1:0] col;
-  wire [15:0] act_val = in_vec_i[col*16 +: 16];
-
+  // MAC: w_dequant * col_data (1-cycle latency from col_addr_o)
   wire [15:0] mac_prod;
-  fp16_mul_comb u_mac_mul (
-    .a_i(w_dequant),
-    .b_i(act_val),
-    .prod_o(mac_prod)
-  );
+  fp16_mul_comb u_mac_mul (.a_i(w_dequant), .b_i(col_data_i), .prod_o(mac_prod));
 
   reg [15:0] acc;
   wire [15:0] acc_sum;
-  fp16_add_comb u_acc_add (
-    .a_i(acc),
-    .b_i(mac_prod),
-    .sum_o(acc_sum)
-  );
+  fp16_add_comb u_acc_add (.a_i(acc), .b_i(mac_prod), .sum_o(acc_sum));
 
-  reg [ROW_W-1:0] row;
-  reg running;
-  reg prefetch;
+  reg [COL_W:0]  col;   // current column (extra bit for overflow detection)
+  reg [ROW_W:0]  row;
+  reg            running;
+  reg            prefetch;
+
+  // col_addr_o advances 1 cycle ahead (account for RAM read latency)
+  // weight_addr_o also advances 1 cycle ahead
+  // Both are issued simultaneously so data arrives aligned
 
   always @(posedge clk_i) begin
     if (rst_i) begin
+      col           <= {(COL_W+1){1'b0}};
+      row           <= {(ROW_W+1){1'b0}};
       acc           <= 16'd0;
-      col           <= {COL_W{1'b0}};
-      row           <= {ROW_W{1'b0}};
       running       <= 1'b0;
       prefetch      <= 1'b0;
       done_o        <= 1'b0;
       out_valid_o   <= 1'b0;
       out_data_o    <= 16'd0;
-      out_addr_o    <= {$clog2(OUT_DIM){1'b0}};
+      out_addr_o    <= {ROW_W{1'b0}};
       weight_addr_o <= {ADDR_W{1'b0}};
+      col_addr_o    <= {COL_W{1'b0}};
 
     end else if (start_i) begin
+      col           <= {(COL_W+1){1'b0}};
+      row           <= {(ROW_W+1){1'b0}};
       acc           <= 16'd0;
-      col           <= {COL_W{1'b0}};
-      row           <= {ROW_W{1'b0}};
       running       <= 1'b0;
       prefetch      <= 1'b1;
       done_o        <= 1'b0;
       out_valid_o   <= 1'b0;
       weight_addr_o <= {ADDR_W{1'b0}};
+      col_addr_o    <= {COL_W{1'b0}};
 
     end else if (prefetch) begin
+      // Issue first addresses, wait 1 cycle for data
       prefetch      <= 1'b0;
       running       <= 1'b1;
       weight_addr_o <= weight_addr_o + 1;
+      col_addr_o    <= col_addr_o + 1;  // will wrap to 0 at start of row
       out_valid_o   <= 1'b0;
 
     end else if (running) begin
       out_valid_o <= 1'b0;
       done_o      <= 1'b0;
 
-      if (col == IN_DIM[COL_W-1:0] - 1) begin
-        // Last element of row — stream out result
+      if (col == IN_DIM[COL_W:0] - 1) begin
+        // Last element of this row — output result
         out_valid_o <= 1'b1;
         out_data_o  <= acc_sum;
-        out_addr_o  <= row[$clog2(OUT_DIM)-1:0];
+        out_addr_o  <= row[ROW_W-1:0];
 
-        col <= {COL_W{1'b0}};
         acc <= 16'd0;
-        weight_addr_o <= weight_addr_o + 1;
-        row <= row + 1;
+        col <= {(COL_W+1){1'b0}};
 
-        if (row == OUT_DIM[ROW_W-1:0] - 1) begin
+        // Next row: reset col_addr to 0
+        col_addr_o    <= {COL_W{1'b0}};
+        weight_addr_o <= weight_addr_o + 1;
+        row           <= row + 1;
+
+        if (row == OUT_DIM[ROW_W:0] - 1) begin
           running <= 1'b0;
           done_o  <= 1'b1;
         end
@@ -128,6 +148,7 @@ module matvec_fp16 #(
       end else begin
         acc           <= acc_sum;
         col           <= col + 1;
+        col_addr_o    <= col[COL_W-1:0] + 1;  // issue next col address
         weight_addr_o <= weight_addr_o + 1;
       end
 
@@ -138,6 +159,7 @@ module matvec_fp16 #(
   end
 
 endmodule
+
 
 module fp16_add_comb (
   input  wire [15:0] a_i,

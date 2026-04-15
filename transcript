@@ -1,29 +1,40 @@
-# vsim -c work.tb_transformer_layer -do "run -all; quit" 
-# Start time: 22:01:00 on Apr 13,2026
-# Loading work.tb_transformer_layer
+# vsim -c work.tb_transformer_top -do "run -all; quit" 
+# Start time: 13:40:10 on Apr 15,2026
+# Loading work.tb_transformer_top
 # Loading work.weight_store
 # Loading work.weight_rom
 # Loading work.kv_cache
+# Loading work.transformer_top
+# Loading work.embedding
+# Loading work.fp16_from_int8
+# Loading work.fp16_mul_comb
+# Loading work.fp16_add_comb
 # Loading work.transformer_layer
 # Loading work.layernorm
-# Loading work.fp16_add_comb
-# Loading work.fp16_mul_comb
 # Loading work.fp16_rsqrt
-# Loading work.fp16_from_int8
 # Loading work.attention
 # Loading work.matvec_fp16
 # Loading work.softmax
 # Loading work.fp16_to_q167
 # Loading work.q115_to_fp16
 # Loading work.gelu
+# Loading work.sampler
 # Loading work.kv_ram
 # run -all
-# === Transformer Layer Testbench ===
-# Test 0 done: layer=0 pos=0 seed=42
-# Test 1 done: layer=0 pos=1 seed=100
-# Test 2 done: layer=2 pos=0 seed=200
+# === Transformer Top Testbench ===
+# Test 0: single token generate, token=42
+#   Test 0: output token=85 (0x55)
+# Test 1: prompt token=10, then token=20+generate
+#   Prompt token=10 done
+#   Test 1: output token=85 (0x55)
+# Test 2: autoregressive 5 tokens from token=42
+#   Token 0: 85 (0x55)
+#   Token 1: 76 (0x4c)
+#   Token 2: 73 (0x49)
+#   Token 3: 69 (0x45)
+#   Token 4: 84 (0x54)
 # === All 3 tests done ===
-# ** Note: $finish    : c:/users/alina/desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v(189)
-#    Time: 6158865 ns  Iteration: 1  Instance: /tb_transformer_layer
-# End time: 22:07:21 on Apr 13,2026, Elapsed time: 0:06:21
+# ** Note: $finish    : c:/users/alina/desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v(220)
+#    Time: 68164495 ns  Iteration: 1  Instance: /tb_transformer_top
+# End time: 15:16:24 on Apr 15,2026, Elapsed time: 1:36:14
 # Errors: 0, Warnings: 0

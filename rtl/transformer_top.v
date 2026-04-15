@@ -141,12 +141,13 @@ module transformer_top (
 
   matvec_fp16 #(.IN_DIM(128), .OUT_DIM(256)) u_head_proj (
     .clk_i(clk_i), .rst_i(rst_i), .start_i(head_start),
-    .in_vec_i(x_reg), .scale_i(SCALE_TOK_EMB_WEIGHT),
+    .col_addr_o(ff_up_col_addr), .col_data_i(sub_ram_rdata_r),
+    .scale_i(ff_up_scale),
     .weight_addr_o(head_w_addr), .weight_data_i(w_data_i),
     .out_valid_o(head_out_valid), .out_data_o(head_out_data),
-    .out_addr_o(head_out_addr),
-    .done_o(head_done)
+    .out_addr_o(head_out_addr), .done_o(head_done)
   );
+
 
   // logits_ram: M10K 256x16 — replaces 4096-bit logits register
   (* ramstyle = "M10K" *) reg [15:0] logits_ram [0:255];

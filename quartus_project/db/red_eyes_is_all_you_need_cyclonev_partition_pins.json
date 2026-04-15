@@ -4,50 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "token_o[0]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[1]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[2]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[3]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[4]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[5]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[6]",
-					"strict" : false
-				},
-				{
-					"name" : "token_o[7]",
-					"strict" : false
-				},
-				{
-					"name" : "token_valid_o",
-					"strict" : false
-				},
-				{
-					"name" : "busy_o",
-					"strict" : false
-				},
-				{
-					"name" : "done_o",
-					"strict" : false
-				},
-				{
 					"name" : "w_sel_o[0]",
 					"strict" : false
 				},
@@ -280,6 +236,62 @@
 					"strict" : false
 				},
 				{
+					"name" : "token_valid_o",
+					"strict" : false
+				},
+				{
+					"name" : "busy_o",
+					"strict" : false
+				},
+				{
+					"name" : "done_o",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "token_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "kv_dim_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "kv_dim_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "kv_dim_o[3]",
+					"strict" : false
+				},
+				{
 					"name" : "kv_head_o[0]",
 					"strict" : false
 				},
@@ -328,23 +340,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "kv_dim_o[1]",
-					"strict" : false
-				},
-				{
-					"name" : "kv_dim_o[2]",
-					"strict" : false
-				},
-				{
-					"name" : "kv_dim_o[3]",
+					"name" : "rst_i",
 					"strict" : false
 				},
 				{
 					"name" : "clk_i",
-					"strict" : false
-				},
-				{
-					"name" : "rst_i",
 					"strict" : false
 				},
 				{
@@ -440,14 +440,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "v_rdata_i[4]",
-					"strict" : false
-				},
-				{
-					"name" : "v_rdata_i[5]",
-					"strict" : false
-				},
-				{
 					"name" : "v_rdata_i[0]",
 					"strict" : false
 				},
@@ -461,6 +453,14 @@
 				},
 				{
 					"name" : "v_rdata_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "v_rdata_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "v_rdata_i[5]",
 					"strict" : false
 				},
 				{
@@ -496,11 +496,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "k_rdata_i[11]",
+					"name" : "k_rdata_i[10]",
 					"strict" : false
 				},
 				{
-					"name" : "k_rdata_i[10]",
+					"name" : "k_rdata_i[11]",
 					"strict" : false
 				},
 				{

@@ -10,190 +10,190 @@ z2
 cModel Technology
 Z0 dC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/scripts
 vattention
-Z1 !s110 1776092456
+Z1 !s110 1776235208
 !i10b 1
-!s100 6oUoNjZX9W@@X<h1X;O4j3
-I2b>?z]AeR39BmFN^G2^>R1
+!s100 zQCM_goDV0d7PdN`o@]aZ2
+IKC5LazkZP?Gfk:U<JIoK40
 R0
-Z2 w1773983496
+w1776233102
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v
-Z3 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh
-!i122 11
-L0 28 528
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OV;L;2021.1;73
+Z2 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh
+!i122 17
+L0 13 566
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OV;L;2021.1;73
 r1
 !s85 0
 31
-Z6 !s108 1776092456.000000
-!s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
-Z7 !s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|
+Z5 !s108 1776235208.000000
+!s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
+Z6 !s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|
 !i113 1
-Z8 o-work work
-Z9 !s92 -work work +incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl
-Z10 tCvgOpt 0
+Z7 o-work work
+Z8 !s92 -work work +incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl
+Z9 tCvgOpt 0
 vembedding
 R1
 !i10b 1
 !s100 Qb`Iee0N5a:n=iO[79iOP0
 IkY`T@D_]TRUL5?hzi;Hka3
 R0
-Z11 w1773983494
+Z10 w1773983494
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v
-!i122 11
+!i122 17
 L0 12 128
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+Z11 !s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
 R6
-Z12 !s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_add
 R1
 !i10b 1
 !s100 gM`AcXXYo1kUiKo5U82Re2
 ILWSeZK9_EU7MC1VUZ_R`k0
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v
-!i122 11
+!i122 17
 L0 9 155
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_add_comb
 R1
 !i10b 1
-!s100 U?zZOkQo>hkdT=BH@N=Q^0
-Ih0TLTe=:oda6hgeH;D3k_0
+!s100 Bj>64jU=]FQTaXS^[Te=T1
+If@f2foIB02OHfLHYf[HKB1
 R0
-Z13 w1775107029
-Z14 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v
-Z15 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v
-!i122 11
-L0 122 115
+Z12 w1776231804
+Z13 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v
+Z14 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v
+!i122 17
+L0 164 115
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_from_int8
 R1
 !i10b 1
 !s100 IVioSDV7[CA=Y<V=?A9C=0
 I`]Al>hk8FoU?f`Qc_IFDN1
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v
-!i122 11
+!i122 17
 L0 9 33
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_mac
 R1
 !i10b 1
 !s100 klEZ7:C^EHHXn8VjcJnMM3
 I<:khQT0h55Z@HNOi1;n@X1
 R0
-R11
-Z16 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v
-Z17 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v
-!i122 11
+R10
+Z15 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v
+Z16 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v
+!i122 17
 L0 9 25
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_mul
 R1
 !i10b 1
 !s100 d<_B:?<B?UIH=PnZY?2RK2
 IM5<o[2U8^8TOS_?fS0z^j0
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v
-!i122 11
+!i122 17
 L0 9 97
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_mul_comb
 R1
 !i10b 1
 !s100 65<1<KP_h2_3k4M:ZoGHC1
 IM0[M@oOSP7:D:C_fen>bL2
 R0
-R11
+R10
+R15
 R16
-R17
-!i122 11
+!i122 17
 L0 36 72
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_rsqrt
 R1
 !i10b 1
@@ -203,253 +203,253 @@ R0
 w1775026259
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v
-!i122 11
+!i122 17
 L0 17 88
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_to_int8
 R1
 !i10b 1
 !s100 Qb3?ocP<z5@5GSFAIAoVz2
 IIVmNO8Ea0e_ciM5F^TVi=1
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v
-!i122 11
+!i122 17
 L0 10 100
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vfp16_to_q167
 R1
 !i10b 1
 !s100 U]9X3RA8_MSDOW7CWFd]B3
 ITPDl5:zQ6^Zc0hk@oNTgf2
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v
-!i122 11
+!i122 17
 L0 10 115
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vgelu
 R1
 !i10b 1
 !s100 ^MMG9Ld7l>Y_47]mBLhE<2
 IRW[H?SWM;]WNfJRI;d@Tb1
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh
-!i122 11
+!i122 17
 L0 10 187
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vkv_cache
 R1
 !i10b 1
 !s100 7zz;Hzie3[Z`eUCGI@7H?1
 I8h6:<D]fegXYPNA20R95C2
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v
-!i122 11
+!i122 17
 L0 12 39
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vkv_ram
 R1
 !i10b 1
 !s100 5CCHb1g6MSbzL45@G9RY43
 IjEA`CJKb8dnQZa1e7zb]j0
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v
-!i122 11
+!i122 17
 L0 7 21
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vlayernorm
 R1
 !i10b 1
-!s100 `W]QZePTRV2zg4X<HPWD21
-IIkF;TUN_gb5DIm2CO>X?O3
+!s100 cJ4Lcdz<Q3NVk7ReI[jdi1
+IH[B2l]@iA^>^XG>><OLiC3
 R0
-R11
+w1776180409
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v
-!i122 11
-L0 18 244
+!i122 17
+L0 32 250
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vmatvec_fp16
 R1
 !i10b 1
-!s100 5^bBmhmH1NM3W`<;EaXaX0
-IQ8X=;1>Lk6Z6[lTDHzJUg0
+!s100 z<^MJPLjnj20zWK<Al:`m1
+I?A77DfYe05<HzkL8iadBU3
 R0
+R12
 R13
 R14
-R15
-!i122 11
-L0 10 110
+!i122 17
+L0 40 122
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vq115_to_fp16
 R1
 !i10b 1
 !s100 fP;E;CWeX4E03`A4oGlLV0
 Il:Qc7IAmW4FhFVK^DJ=LC3
 R0
-R11
+R10
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v
-!i122 11
+!i122 17
 L0 9 83
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vsampler
 R1
 !i10b 1
 !s100 ?@9VabE4VTk=[1mjU2V^e1
 Ii0jCM6nVS?i:9h:UINSQ^3
 R0
-R11
+w1776180439
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v
-!i122 11
+!i122 17
 L0 11 75
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vsoftmax
 R1
 !i10b 1
-!s100 `O];EZ8oC2S_`?P8ME:LD0
-I]G0agPQnH@WK;1J;bKFCR3
+!s100 3@CU^ZiW3C[Ynh7WT`i8k2
+IKEXcU<HBLLI89Kc:1hn^D1
 R0
-w1775107383
+w1776233474
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v
-!i122 11
-L0 29 299
+!i122 17
+L0 29 305
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vtb_attention
-!s110 1776087254
+Z17 !s110 1776234480
 !i10b 1
 !s100 d5MBeA`=KXJFhbR7OEo2B3
 IYkniP1Z80gm3RVhZ=>T:K2
@@ -457,22 +457,22 @@ R0
 w1775028400
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v
-!i122 7
+!i122 15
 Z18 L0 3 198
+R3
 R4
-R5
 r1
 !s85 0
 31
-!s108 1776087254.000000
-!s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
-!s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|
+Z19 !s108 1776234480.000000
+Z20 !s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
+Z21 !s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|
 !i113 1
+R7
 R8
 R9
-R10
 vtb_attention_stress
-Z19 !s110 1776086959
+Z22 !s110 1776086959
 !i10b 1
 !s100 f]0kXk9IGNImFmC4oKAaD0
 I:2:7KJX@^>a5FGi@Bk<ZQ3
@@ -482,20 +482,20 @@ w1775028390
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention_stress.v
 !i122 6
 L0 3 196
+R3
 R4
-R5
 r1
 !s85 0
 31
-Z20 !s108 1776086959.000000
-Z21 !s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
-Z22 !s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|
+Z23 !s108 1776086959.000000
+Z24 !s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
+Z25 !s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_attention_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top_stress.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v|
 !i113 1
+R7
 R8
 R9
-R10
 vtb_embedding
-R19
+R17
 !i10b 1
 !s100 V62oF?V^AQQjDV;;P64AI0
 ISgabK4c3mVlTWd6IB8JkK0
@@ -503,23 +503,23 @@ R0
 w1775028307
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_embedding.v
-R3
-!i122 6
+R2
+!i122 15
 L0 3 157
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_fp16
-R19
+R17
 !i10b 1
 !s100 BG0XfJhPKL^8]18`gi1M32
 ITfzZZ9eoU==JHNY8USNKZ2
@@ -527,22 +527,22 @@ R0
 w1775028404
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_fp16.v
-!i122 6
+!i122 15
 L0 4 425
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_gelu
-R19
+R17
 !i10b 1
 !s100 0]=Z2STRJVRPjB<]0:F?O3
 Ib`NIeememANI:OiM]W;BN2
@@ -550,22 +550,22 @@ R0
 w1775028409
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_gelu.v
-!i122 6
+!i122 15
 L0 3 87
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_kv_cache
-R19
+R17
 !i10b 1
 !s100 >iX_^]AOcen6EFE=e7OfI3
 I3cj[C0=cVSRoMgUMefc>K2
@@ -573,22 +573,22 @@ R0
 w1775028414
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_kv_cache.v
-!i122 6
+!i122 15
 L0 3 189
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_layernorm
-R19
+R17
 !i10b 1
 !s100 ]ei[I3JK7=H:JJ=0[YAn`3
 Ij7<_5CI3;aSjQ2Laj=HA=0
@@ -596,23 +596,23 @@ R0
 w1775028355
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_layernorm.v
-R3
-!i122 6
+R2
+!i122 15
 L0 3 250
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_softmax
-R19
+R17
 !i10b 1
 !s100 GQ3ZcCEf]@kF@<3f?VcKM2
 I7IK]ZM@^[7NGC7C=6SZAO1
@@ -620,22 +620,22 @@ R0
 w1775028420
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_softmax.v
-!i122 6
+!i122 15
 L0 3 342
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtb_transformer_layer
-R1
+!s110 1776234823
 !i10b 1
 !s100 nHaCUe1a8f_g9C_faRhO51
 IEThHcX5Gg2CK^ASRIQh]H2
@@ -643,22 +643,22 @@ R0
 w1775028435
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v
-!i122 11
+!i122 16
 L0 3 197
+R3
 R4
-R5
 r1
 !s85 0
 31
-R6
-R12
-R7
+!s108 1776234822.000000
+!s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
+!s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer.v|
 !i113 1
+R7
 R8
 R9
-R10
 vtb_transformer_layer_stress
-R19
+R22
 !i10b 1
 !s100 _NRDE0U4B@fC:bH<jd62S2
 ICU`oKa79geUD2aAll`V_j1
@@ -668,20 +668,20 @@ w1775028425
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_layer_stress.v
 !i122 6
 L0 3 195
+R3
 R4
-R5
 r1
 !s85 0
 31
-R20
-R21
-R22
+R23
+R24
+R25
 !i113 1
+R7
 R8
 R9
-R10
 vtb_transformer_top
-!s110 1776087883
+R1
 !i10b 1
 !s100 HbZSb9KeoV_>;m@4U1WHn0
 Ii^0]@J6k^a@e?4Z8S]b?<0
@@ -689,22 +689,22 @@ R0
 w1775028442
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v
-!i122 9
+!i122 17
 L0 3 233
+R3
 R4
-R5
 r1
 !s85 0
 31
-!s108 1776087882.000000
-!s107 C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu_pwl_coeffs.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_scales.vh|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|
-!s90 -work|work|+incdir+C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/attention.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/embedding.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_add.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_from_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mac.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_mul.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_rsqrt.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_int8.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/fp16_to_q167.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/gelu.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_cache.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/kv_ram.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/layernorm.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/matvec_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/q115_to_fp16.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/sampler.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/softmax.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v|C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top.v|
+R5
+R11
+R6
 !i113 1
+R7
 R8
 R9
-R10
 vtb_transformer_top_stress
-R19
+R22
 !i10b 1
 !s100 5[=gLA88<;6A1lkoeO5]m1
 ImNm^HeL6_Y7@ALTo8Q9E<2
@@ -714,20 +714,20 @@ w1775028438
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_transformer_top_stress.v
 !i122 6
 R18
+R3
 R4
-R5
 r1
 !s85 0
 31
-R20
-R21
-R22
+R23
+R24
+R25
 !i113 1
+R7
 R8
 R9
-R10
 vtb_weight_store
-R19
+R17
 !i10b 1
 !s100 AVlbQ6I7CI3KlGm5hFA0P1
 Ijc4?29z812R0d`8:e1X1m3
@@ -735,91 +735,91 @@ R0
 w1775028375
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/tb/tb_weight_store.v
-!i122 6
+!i122 15
 L0 4 149
+R3
 R4
-R5
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !i113 1
+R7
 R8
 R9
-R10
 vtransformer_layer
 R1
 !i10b 1
-!s100 fh7E;?E>8iV^]eUgeaoeT2
-IIUFUfTT@d8_WZjUKQJ8`S0
+!s100 om>L6KWIQkf0^k5]C50li0
+If>`7IEglTf@T7l]W=bGNM1
 R0
-w1776092452
+w1776232152
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_layer.v
+R2
+!i122 17
+L0 9 433
 R3
-!i122 11
-L0 20 609
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vtransformer_top
 R1
 !i10b 1
-!s100 >Q0zaR3HXD:K59VP<mEmA2
-INM50b5cF2gI55bRG?6>R@0
+!s100 Ue@??`ldSZ0VQGEj@6O5@2
+I13ZJ<n^dbD]K_DIcb_@KN2
 R0
-R2
+w1776232567
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/transformer_top.v
+R2
+!i122 17
+L0 10 420
 R3
-!i122 11
-L0 21 391
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vweight_rom
 R1
 !i10b 1
 !s100 IE6Y12ZFLA`VN[=zIERa>3
 IJPDYa7];GnciP<T7jC3[V1
 R0
-R2
+w1773983496
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_rom.v
-!i122 11
+!i122 17
 L0 6 20
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10
 vweight_store
 R1
 !i10b 1
@@ -829,18 +829,18 @@ R0
 w1775106929
 8C:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v
 FC:/Users/alina/Desktop/red_eyes_is_all_you_need_cyclonev2/red_eyes_is_all_you_need_cyclonev/rtl/weight_store.v
-R3
-!i122 11
+R2
+!i122 17
 L0 45 361
+R3
 R4
-R5
 r1
 !s85 0
 31
+R5
+R11
 R6
-R12
-R7
 !i113 1
+R7
 R8
 R9
-R10

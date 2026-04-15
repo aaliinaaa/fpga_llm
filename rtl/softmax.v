@@ -61,6 +61,10 @@ module softmax #(
 
   reg [2:0] state;
 
+  reg [4:0] sum_lod;
+  reg [3:0] sum_mantissa;
+  reg       sum_is_zero;
+
 
   // Input buffer BRAM (N x IN_W)
   (* ramstyle = "M10K" *) reg [IN_W-1:0] input_buf [0:N-1];
@@ -162,9 +166,9 @@ module softmax #(
 
 
   // LOD for sum_acc (combinational)
-  reg [4:0] sum_lod;
-  reg [3:0] sum_mantissa;
-  reg       sum_is_zero;
+//   reg [4:0] sum_lod;
+//   reg [3:0] sum_mantissa;
+//   reg       sum_is_zero;
   integer i;
   always @(*) begin
     sum_lod = 5'd0;

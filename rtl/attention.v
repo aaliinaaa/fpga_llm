@@ -117,9 +117,6 @@ module attention (
   // Actually matvec_fp16 needs the FULL in_vec_i bus combinationally each cycle.
   // We must materialise it. Use a 128x16 register filled from head_out_ram
   // over 128 cycles before starting proj. This reg is the minimum needed.
-  reg [2047:0] proj_in_buf;
-  reg          proj_buf_loading;
-  reg [7:0]    proj_buf_idx;
 
   // -----------------------------------------------------------------------
   // QKV matvec — streaming output captured into qkv_ram
@@ -135,7 +132,7 @@ module attention (
     .clk_i        (clk_i),
     .rst_i        (rst_i),
     .start_i      (qkv_start),
-    .in_vec_i     (x_i),
+    .col_addr_o(out_addr_o), .col_data_i(out_data_o),
     .scale_i      (qkv_scale),
     .weight_addr_o(qkv_w_addr),
     .weight_data_i(w_data_i),
@@ -144,6 +141,7 @@ module attention (
     .out_addr_o   (qkv_out_addr),
     .done_o       (qkv_done)
   );
+
 
   // Capture qkv streaming output into qkv_ram
   always @(*) begin
@@ -162,11 +160,14 @@ module attention (
   wire [6:0]   proj_out_addr;
   wire         proj_done;
 
+  wire [6:0] proj_col_addr;
+  // u_proj reads directly from head_out_ram via col_addr_o (no proj_in_buf wide reg)
   matvec_fp16 #(.IN_DIM(128), .OUT_DIM(128)) u_proj (
     .clk_i        (clk_i),
     .rst_i        (rst_i),
     .start_i      (proj_start),
-    .in_vec_i     (proj_in_buf),
+    .col_addr_o   (proj_col_addr),
+    .col_data_i   (hor_rdata_r),
     .scale_i      (proj_scale),
     .weight_addr_o(proj_w_addr),
     .weight_data_i(w_data_i),
@@ -311,7 +312,6 @@ module attention (
       k_we_o           <= 1'b0;
       v_we_o           <= 1'b0;
       hor_we           <= 1'b0;
-      proj_buf_loading <= 1'b0;
 
     end else begin
       done_o      <= 1'b0;
@@ -501,11 +501,9 @@ module attention (
 
         S_NEXT_HEAD: begin
           if (head_idx == 3'd7) begin
-            // Load proj_in_buf from head_out_ram before starting proj
-            proj_buf_loading <= 1'b1;
-            proj_buf_idx     <= 8'd0;
-            hor_raddr        <= 7'd0;
-            state            <= S_PROJ;
+            // proj reads head_out_ram directly via col_addr_o
+            proj_start <= 1'b1;
+            state      <= S_PROJ;
           end else begin
             head_idx  <= head_idx + 3'd1;
             state     <= S_SCORE;
@@ -518,22 +516,10 @@ module attention (
           end
         end
 
-        // S_PROJ: first 130 cycles load proj_in_buf from head_out_ram,
-        // then start proj matvec (proj runs while state stays S_PROJ)
+        // S_PROJ: proj reads head_out_ram via col_addr_o directly
+        // hor_raddr follows proj_col_addr (1-cycle BRAM latency handled by matvec)
         S_PROJ: begin
-          if (proj_buf_loading) begin
-            // Advance read address
-            if (proj_buf_idx < 8'd127)
-              hor_raddr <= hor_raddr + 7'd1;
-            // Capture data (2-cycle latency)
-            if (proj_buf_idx >= 8'd2)
-              proj_in_buf[(proj_buf_idx - 8'd2)*16 +: 16] <= hor_rdata_r;
-            proj_buf_idx <= proj_buf_idx + 8'd1;
-            if (proj_buf_idx == 8'd129) begin
-              proj_buf_loading <= 1'b0;
-              proj_start       <= 1'b1;
-            end
-          end
+          hor_raddr <= proj_col_addr;
           if (proj_done) begin
             state <= S_DONE;
           end
